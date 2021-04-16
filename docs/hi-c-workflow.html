@@ -33,6 +33,7 @@
   
 <link rel="prev" href="genome-wide-associated-studies-gwas.html"/>
 
+<script src="libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -53,25 +54,27 @@
 
 
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
+    border: none; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -80,9 +83,9 @@ pre.numberSource a.sourceLine::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {  }
+  {   }
 @media screen {
-a.sourceLine::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -132,21 +135,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a></li>
-<li class="chapter" data-level="2" data-path="analyis-of-new-generation-sequencing-data-in-r.html"><a href="analyis-of-new-generation-sequencing-data-in-r.html"><i class="fa fa-check"></i><b>2</b> Analyis of new generation sequencing data in R</a><ul>
+<li class="chapter" data-level="2" data-path="analyis-of-new-generation-sequencing-data-in-r.html"><a href="analyis-of-new-generation-sequencing-data-in-r.html"><i class="fa fa-check"></i><b>2</b> Analyis of new generation sequencing data in R</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="analyis-of-new-generation-sequencing-data-in-r.html"><a href="analyis-of-new-generation-sequencing-data-in-r.html#get-fastq-from-sra"><i class="fa fa-check"></i><b>2.1</b> Get fastq from SRA</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="get-fastq-from-sra-database.html"><a href="get-fastq-from-sra-database.html"><i class="fa fa-check"></i><b>3</b> Get fastq from SRA database</a><ul>
+<li class="chapter" data-level="3" data-path="get-fastq-from-sra-database.html"><a href="get-fastq-from-sra-database.html"><i class="fa fa-check"></i><b>3</b> Get fastq from SRA database</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="get-fastq-from-sra-database.html"><a href="get-fastq-from-sra-database.html#get-fastq-from-sra-database-1"><i class="fa fa-check"></i><b>3.1</b> Get fastq from SRA database</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="differential-expression-analysis-using-basic-r.html"><a href="differential-expression-analysis-using-basic-r.html"><i class="fa fa-check"></i><b>4</b> Differential expression analysis using basic R</a><ul>
+<li class="chapter" data-level="4" data-path="differential-expression-analysis-using-basic-r.html"><a href="differential-expression-analysis-using-basic-r.html"><i class="fa fa-check"></i><b>4</b> Differential expression analysis using basic R</a>
+<ul>
 <li class="chapter" data-level="4.1" data-path="differential-expression-analysis-using-basic-r.html"><a href="differential-expression-analysis-using-basic-r.html#gene-expression-analysis-of-histone-deacetylase-1-hdac1-knockout-mouse."><i class="fa fa-check"></i><b>4.1</b> Gene expression analysis of histone deacetylase 1 (HDAC1) knockout mouse.</a></li>
 <li class="chapter" data-level="4.2" data-path="differential-expression-analysis-using-basic-r.html"><a href="differential-expression-analysis-using-basic-r.html#sources"><i class="fa fa-check"></i><b>4.2</b> Sources</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="genome-wide-associated-studies-gwas.html"><a href="genome-wide-associated-studies-gwas.html"><i class="fa fa-check"></i><b>5</b> Genome Wide Associated Studies (GWAS)"</a><ul>
+<li class="chapter" data-level="5" data-path="genome-wide-associated-studies-gwas.html"><a href="genome-wide-associated-studies-gwas.html"><i class="fa fa-check"></i><b>5</b> Genome Wide Associated Studies (GWAS)"</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="genome-wide-associated-studies-gwas.html"><a href="genome-wide-associated-studies-gwas.html#snp-analysis-using-snpasoc-r-package"><i class="fa fa-check"></i><b>5.1</b> SNP analysis using SNPasoc R package</a></li>
 <li class="chapter" data-level="5.2" data-path="genome-wide-associated-studies-gwas.html"><a href="genome-wide-associated-studies-gwas.html#gwas-using-plink"><i class="fa fa-check"></i><b>5.2</b> GWAS using PLINK</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="hi-c-workflow.html"><a href="hi-c-workflow.html"><i class="fa fa-check"></i><b>6</b> Hi-C workflow</a><ul>
+<li class="chapter" data-level="6" data-path="hi-c-workflow.html"><a href="hi-c-workflow.html"><i class="fa fa-check"></i><b>6</b> Hi-C workflow</a>
+<ul>
 <li class="chapter" data-level="6.1" data-path="hi-c-workflow.html"><a href="hi-c-workflow.html#using-straw-tool-to-extract-contact-matrix-from-.hic-files"><i class="fa fa-check"></i><b>6.1</b> Using straw tool to extract contact matrix from .hic files</a></li>
 <li class="chapter" data-level="6.2" data-path="hi-c-workflow.html"><a href="hi-c-workflow.html#hic-pro-pipeline"><i class="fa fa-check"></i><b>6.2</b> HiC-Pro pipeline</a></li>
 <li class="chapter" data-level="6.3" data-path="hi-c-workflow.html"><a href="hi-c-workflow.html#multihic-compare-for-compare-of-2-hi-c-datasets-rao-et-al.-2017"><i class="fa fa-check"></i><b>6.3</b> multiHiC compare for compare of 2 Hi-C datasets (Rao et al. 2017)</a></li>
@@ -173,7 +181,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="hi-c-workflow" class="section level1">
+<div id="hi-c-workflow" class="section level1" number="6">
 <h1><span class="header-section-number">Chapter 6</span> Hi-C workflow</h1>
 <p>Workflow from Stansfield et al., Current Protocols in Bioinformatics, 2019</p>
 <p>Hi-C workflow steps:<br />
@@ -187,25 +195,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 The theoretical maximum resolution of Hi-C sequencing is set by the restriction enzyme used to cut the DNA. However, most Hi-C datasets are not sequenced deeply enough to reach this theoretical maximum, and typically one of a few fixed-size resolutions are chosen for analyzing the data, including 1 Mb, 100 kb, 50 kb, 40 kb, 20 kb, 10 kb, and 5 kb.<br />
 Two of the more popular pipelines for aligning Hi-C data are <strong>juicer</strong> (Durand, Shamim, &amp; Aiden, 2016) and <strong>HiC-Pro</strong> (Servant et al., 2015).</p>
 <p><a href="https://github.com/aidenlab/juicer/wiki"><strong>juicer</strong></a> takes fastq files and aligns the data into .hic sparse contact maps. Alignment is based on BWA. Contact maps can be extracted from .hic files using juicer or the command line tool <strong>straw</strong>.</p>
-<div id="using-straw-tool-to-extract-contact-matrix-from-.hic-files" class="section level2">
+<div id="using-straw-tool-to-extract-contact-matrix-from-.hic-files" class="section level2" number="6.1">
 <h2><span class="header-section-number">6.1</span> Using straw tool to extract contact matrix from .hic files</h2>
-<div class="sourceCode" id="cb47"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb47-1" title="1"><span class="op">&lt;</span><span class="ex">NONE/VC/VC_SQRT</span>/<span class="ex">KR</span><span class="op">&gt;</span> <span class="op">&lt;</span>hicFile(s)<span class="op">&gt;</span> <span class="op">&lt;</span><span class="ex">chr1</span><span class="op">&gt;</span>[:x1:x2] <span class="op">&lt;</span>chr2<span class="op">&gt;</span>[:y1:y2] <span class="op">&lt;</span>BP/FRAG<span class="op">&gt;</span> <span class="op">&lt;</span>binsize<span class="op">&gt;</span></a></code></pre></div>
+<div class="sourceCode" id="cb47"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb47-1"><a href="hi-c-workflow.html#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>NONE/VC/VC_SQRT/KR<span class="op">&gt;</span> <span class="op">&lt;</span>hicFile<span class="kw">(</span><span class="ex">s</span><span class="kw">)</span><span class="op">&gt;</span> <span class="op">&lt;</span>chr1<span class="op">&gt;</span>[:x1:x2] <span class="op">&lt;</span>chr2<span class="op">&gt;</span>[:y1:y2] <span class="op">&lt;</span>BP/FRAG<span class="op">&gt;</span> <span class="op">&lt;</span>binsize<span class="op">&gt;</span></span></code></pre></div>
 <p>VC - vanilla coverage normalization<br />
 VC_SQRT - square root of vanilla coverage normalization<br />
 KR - Knight-Ruiz (KR) normalization<br />
 BP/FRAG - base pare or fragment size. Typically we use BP.</p>
-<div class="sourceCode" id="cb48"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb48-1" title="1"><span class="fu">mkdir</span> ~/GEO</a>
-<a class="sourceLine" id="cb48-2" title="2"><span class="bu">cd</span> ~/GEO</a>
-<a class="sourceLine" id="cb48-3" title="3"><span class="co"># download .hic file [9 Gb]</span></a>
-<a class="sourceLine" id="cb48-4" title="4"><span class="fu">wget</span> ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE63nnn/GSE63525/suppl/GSE63525_K562_combined_30.hic</a>
-<a class="sourceLine" id="cb48-5" title="5"><span class="co"># extract raw matrix for 22 chromosome at 500-kb resolution</span></a>
-<a class="sourceLine" id="cb48-6" title="6"><span class="ex">straw</span> NONE GSE63525_K562_combined_30.hic 22 22 BP 500000 <span class="op">&gt;</span> K562.chHCT116_r22.500 kb.txt</a></code></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb48-1"><a href="hi-c-workflow.html#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> ~/GEO</span>
+<span id="cb48-2"><a href="hi-c-workflow.html#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/GEO</span>
+<span id="cb48-3"><a href="hi-c-workflow.html#cb48-3" aria-hidden="true" tabindex="-1"></a><span class="co"># download .hic file [9 Gb]</span></span>
+<span id="cb48-4"><a href="hi-c-workflow.html#cb48-4" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE63nnn/GSE63525/suppl/GSE63525_K562_combined_30.hic</span>
+<span id="cb48-5"><a href="hi-c-workflow.html#cb48-5" aria-hidden="true" tabindex="-1"></a><span class="co"># extract raw matrix for 22 chromosome at 500-kb resolution</span></span>
+<span id="cb48-6"><a href="hi-c-workflow.html#cb48-6" aria-hidden="true" tabindex="-1"></a><span class="ex">straw</span> NONE GSE63525_K562_combined_30.hic 22 22 BP 500000 <span class="op">&gt;</span> K562.chHCT116_r22.500 kb.txt</span></code></pre></div>
 <p>txt file is in the sparse upper-triangular matrix format, containing 3 columns:<br />
 1. start of interaction<br />
 2. end of interaction<br />
 3. frequency (IF)</p>
 </div>
-<div id="hic-pro-pipeline" class="section level2">
+<div id="hic-pro-pipeline" class="section level2" number="6.2">
 <h2><span class="header-section-number">6.2</span> HiC-Pro pipeline</h2>
 <p>Output 2 files (.matrix and .bed):<br />
 * The .matrix is plain-text 3-column sparse upper-triangular matrix with the columns <span class="math inline">\(bin_i\)</span> <span class="math inline">\(bin_j\)</span> and <span class="math inline">\(counts_ij\)</span>.<br />
@@ -214,115 +222,115 @@ BP/FRAG - base pare or fragment size. Typically we use BP.</p>
 <code>hicpro2bedpe</code> - convert alignments by HiC-Pro into BEDPE format.<br />
 <code>hicpro2bedpe</code> - input .matrix and .bed and convert into sparse upper-triangular matrix.</p>
 </div>
-<div id="multihic-compare-for-compare-of-2-hi-c-datasets-rao-et-al.-2017" class="section level2">
+<div id="multihic-compare-for-compare-of-2-hi-c-datasets-rao-et-al.-2017" class="section level2" number="6.3">
 <h2><span class="header-section-number">6.3</span> multiHiC compare for compare of 2 Hi-C datasets (Rao et al. 2017)</h2>
-<div class="sourceCode" id="cb49"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb49-1" title="1"><span class="fu">mkdir</span> ~/GEO</a>
-<a class="sourceLine" id="cb49-2" title="2"><span class="bu">cd</span> ~/GEO</a>
-<a class="sourceLine" id="cb49-3" title="3"><span class="co"># download .hic files from</span></a>
-<a class="sourceLine" id="cb49-4" title="4"><span class="fu">wget</span> ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2795nnn/GSM2795535/suppl/GSM2795535_Rao-2017-HIC001_30.hic</a>
-<a class="sourceLine" id="cb49-5" title="5"><span class="fu">wget</span> ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2795nnn/GSM2795536/suppl/GSM2795536_Rao-2017-HIC002_30.hic</a>
-<a class="sourceLine" id="cb49-6" title="6"><span class="fu">wget</span> ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2809nnn/GSM2809539/suppl/GSM2809539_Rao-2017-HIC008_30.hic</a>
-<a class="sourceLine" id="cb49-7" title="7"><span class="fu">wget</span> ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2809nnn/GSM2809540/suppl/GSM2809540_Rao-2017-HIC009_30.hic</a>
-<a class="sourceLine" id="cb49-8" title="8"></a>
-<a class="sourceLine" id="cb49-9" title="9"><span class="co"># convert .hic to sparse contact matrix for each of 22 chromosomes</span></a>
-<a class="sourceLine" id="cb49-10" title="10"><span class="kw">for</span> <span class="ex">i</span> in <span class="dt">{1,2,8,9}</span></a>
-<a class="sourceLine" id="cb49-11" title="11">   <span class="kw">do</span></a>
-<a class="sourceLine" id="cb49-12" title="12">     <span class="fu">mkdir</span> HIC00<span class="va">${i}</span></a>
-<a class="sourceLine" id="cb49-13" title="13">     <span class="kw">for</span> <span class="ex">j</span> in <span class="dt">{1..22}</span></a>
-<a class="sourceLine" id="cb49-14" title="14">       <span class="kw">do</span></a>
-<a class="sourceLine" id="cb49-15" title="15">         <span class="ex">straw</span> NONE *_Rao-2017-HIC00<span class="va">${i}</span>_30.hic <span class="va">$j</span> <span class="va">$j</span> BP 100000 <span class="op">&gt;</span> HIC00<span class="va">${i}</span>/HIC00<span class="va">${i}</span>.NONE.chr<span class="va">${j}</span>.100000.txt</a>
-<a class="sourceLine" id="cb49-16" title="16">       <span class="kw">done</span></a>
-<a class="sourceLine" id="cb49-17" title="17">   <span class="kw">done</span></a></code></pre></div>
-<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb50-1" title="1"><span class="kw">library</span>(readr)</a>
-<a class="sourceLine" id="cb50-2" title="2"><span class="kw">library</span>(data.table)</a>
-<a class="sourceLine" id="cb50-3" title="3"><span class="kw">library</span>(dplyr)</a>
-<a class="sourceLine" id="cb50-4" title="4"><span class="kw">library</span>(edgeR)</a>
-<a class="sourceLine" id="cb50-5" title="5"><span class="kw">library</span>(BiocParallel)</a>
-<a class="sourceLine" id="cb50-6" title="6"><span class="kw">library</span>(HiCcompare)</a>
-<a class="sourceLine" id="cb50-7" title="7"><span class="kw">library</span>(multiHiCcompare)</a>
-<a class="sourceLine" id="cb50-8" title="8"></a>
-<a class="sourceLine" id="cb50-9" title="9"></a>
-<a class="sourceLine" id="cb50-10" title="10"><span class="kw">options</span>(<span class="dt">scipen =</span> <span class="dv">10</span>) <span class="co"># output fixed numbers</span></a>
-<a class="sourceLine" id="cb50-11" title="11"></a>
-<a class="sourceLine" id="cb50-12" title="12"><span class="co"># Set up parameters for reading in data</span></a>
-<a class="sourceLine" id="cb50-13" title="13">chr &lt;-<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&#39;chr&#39;</span>, <span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">22</span>))     <span class="co"># Chromosome names</span></a>
-<a class="sourceLine" id="cb50-14" title="14">samples &lt;-<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&#39;HIC00&#39;</span>, <span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">8</span>,<span class="dv">9</span>)) <span class="co"># Sample names</span></a>
-<a class="sourceLine" id="cb50-15" title="15">res &lt;-<span class="st"> </span><span class="dv">100000</span>                          <span class="co"># Data resolution</span></a>
-<a class="sourceLine" id="cb50-16" title="16"></a>
-<a class="sourceLine" id="cb50-17" title="17"><span class="co"># Read data</span></a>
-<a class="sourceLine" id="cb50-18" title="18">sample_list &lt;-<span class="st"> </span><span class="kw">list</span>()</a>
-<a class="sourceLine" id="cb50-19" title="19">chr_list &lt;-<span class="st"> </span><span class="kw">list</span>()</a>
-<a class="sourceLine" id="cb50-20" title="20">wd &lt;-<span class="st"> &#39;/home/suvar/GEO/&#39;</span></a>
-<a class="sourceLine" id="cb50-21" title="21"><span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">length</span>(samples)) {</a>
-<a class="sourceLine" id="cb50-22" title="22">  <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">length</span>(chr)) {</a>
-<a class="sourceLine" id="cb50-23" title="23">    chr_list[[i]] &lt;-<span class="st"> </span><span class="kw">read_tsv</span>(<span class="kw">paste0</span>(wd, samples[j], <span class="st">&#39;/&#39;</span>,</a>
-<a class="sourceLine" id="cb50-24" title="24">    samples[j], <span class="st">&#39;.NONE.&#39;</span>, chr[i], <span class="st">&#39;.&#39;</span>, res, <span class="st">&#39;.txt&#39;</span>),</a>
-<a class="sourceLine" id="cb50-25" title="25">    <span class="dt">col_names =</span> <span class="ot">FALSE</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">as.data.table</span>()</a>
-<a class="sourceLine" id="cb50-26" title="26">    <span class="co"># Add column indicating the chromosome</span></a>
-<a class="sourceLine" id="cb50-27" title="27">    chr_list[[i]] &lt;-<span class="st"> </span><span class="kw">cbind</span>(i, chr_list[[i]])</a>
-<a class="sourceLine" id="cb50-28" title="28">    <span class="kw">colnames</span>(chr_list[[i]]) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&#39;chr&#39;</span>, <span class="st">&#39;region1&#39;</span>, <span class="st">&#39;region2&#39;</span>, <span class="st">&#39;IF&#39;</span>)</a>
-<a class="sourceLine" id="cb50-29" title="29">  }</a>
-<a class="sourceLine" id="cb50-30" title="30">  sample_list[[j]] &lt;-<span class="st"> </span>chr_list</a>
-<a class="sourceLine" id="cb50-31" title="31">  chr_list &lt;-<span class="st"> </span><span class="kw">list</span>()</a>
-<a class="sourceLine" id="cb50-32" title="32">}</a>
-<a class="sourceLine" id="cb50-33" title="33"></a>
-<a class="sourceLine" id="cb50-34" title="34"><span class="co"># Collapse separate chromosome lists into one table per sample</span></a>
-<a class="sourceLine" id="cb50-35" title="35">sample_list &lt;-<span class="st"> </span><span class="kw">lapply</span>(sample_list, rbindlist)</a>
-<a class="sourceLine" id="cb50-36" title="36">  </a>
-<a class="sourceLine" id="cb50-37" title="37">sample_list[[<span class="dv">1</span>]]</a></code></pre></div>
+<div class="sourceCode" id="cb49"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb49-1"><a href="hi-c-workflow.html#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> ~/GEO</span>
+<span id="cb49-2"><a href="hi-c-workflow.html#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/GEO</span>
+<span id="cb49-3"><a href="hi-c-workflow.html#cb49-3" aria-hidden="true" tabindex="-1"></a><span class="co"># download .hic files from</span></span>
+<span id="cb49-4"><a href="hi-c-workflow.html#cb49-4" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2795nnn/GSM2795535/suppl/GSM2795535_Rao-2017-HIC001_30.hic</span>
+<span id="cb49-5"><a href="hi-c-workflow.html#cb49-5" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2795nnn/GSM2795536/suppl/GSM2795536_Rao-2017-HIC002_30.hic</span>
+<span id="cb49-6"><a href="hi-c-workflow.html#cb49-6" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2809nnn/GSM2809539/suppl/GSM2809539_Rao-2017-HIC008_30.hic</span>
+<span id="cb49-7"><a href="hi-c-workflow.html#cb49-7" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2809nnn/GSM2809540/suppl/GSM2809540_Rao-2017-HIC009_30.hic</span>
+<span id="cb49-8"><a href="hi-c-workflow.html#cb49-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-9"><a href="hi-c-workflow.html#cb49-9" aria-hidden="true" tabindex="-1"></a><span class="co"># convert .hic to sparse contact matrix for each of 22 chromosomes</span></span>
+<span id="cb49-10"><a href="hi-c-workflow.html#cb49-10" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="dt">{1</span><span class="op">,</span><span class="dt">2</span><span class="op">,</span><span class="dt">8</span><span class="op">,</span><span class="dt">9}</span></span>
+<span id="cb49-11"><a href="hi-c-workflow.html#cb49-11" aria-hidden="true" tabindex="-1"></a>   <span class="cf">do</span></span>
+<span id="cb49-12"><a href="hi-c-workflow.html#cb49-12" aria-hidden="true" tabindex="-1"></a>     <span class="fu">mkdir</span> HIC00<span class="va">${i}</span></span>
+<span id="cb49-13"><a href="hi-c-workflow.html#cb49-13" aria-hidden="true" tabindex="-1"></a>     <span class="cf">for</span> j <span class="kw">in</span> {1..22}</span>
+<span id="cb49-14"><a href="hi-c-workflow.html#cb49-14" aria-hidden="true" tabindex="-1"></a>       <span class="cf">do</span></span>
+<span id="cb49-15"><a href="hi-c-workflow.html#cb49-15" aria-hidden="true" tabindex="-1"></a>         <span class="ex">straw</span> NONE <span class="pp">*</span>_Rao-2017-HIC00<span class="va">${i}</span>_30.hic <span class="va">$j</span> <span class="va">$j</span> BP 100000 <span class="op">&gt;</span> HIC00<span class="va">${i}</span>/HIC00<span class="va">${i}</span>.NONE.chr<span class="va">${j}</span>.100000.txt</span>
+<span id="cb49-16"><a href="hi-c-workflow.html#cb49-16" aria-hidden="true" tabindex="-1"></a>       <span class="cf">done</span></span>
+<span id="cb49-17"><a href="hi-c-workflow.html#cb49-17" aria-hidden="true" tabindex="-1"></a>   <span class="cf">done</span></span></code></pre></div>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="hi-c-workflow.html#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb50-2"><a href="hi-c-workflow.html#cb50-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(data.table)</span>
+<span id="cb50-3"><a href="hi-c-workflow.html#cb50-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb50-4"><a href="hi-c-workflow.html#cb50-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(edgeR)</span>
+<span id="cb50-5"><a href="hi-c-workflow.html#cb50-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(BiocParallel)</span>
+<span id="cb50-6"><a href="hi-c-workflow.html#cb50-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(HiCcompare)</span>
+<span id="cb50-7"><a href="hi-c-workflow.html#cb50-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(multiHiCcompare)</span>
+<span id="cb50-8"><a href="hi-c-workflow.html#cb50-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-9"><a href="hi-c-workflow.html#cb50-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-10"><a href="hi-c-workflow.html#cb50-10" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">scipen =</span> <span class="dv">10</span>) <span class="co"># output fixed numbers</span></span>
+<span id="cb50-11"><a href="hi-c-workflow.html#cb50-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-12"><a href="hi-c-workflow.html#cb50-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up parameters for reading in data</span></span>
+<span id="cb50-13"><a href="hi-c-workflow.html#cb50-13" aria-hidden="true" tabindex="-1"></a>chr <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&#39;chr&#39;</span>, <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">22</span>))     <span class="co"># Chromosome names</span></span>
+<span id="cb50-14"><a href="hi-c-workflow.html#cb50-14" aria-hidden="true" tabindex="-1"></a>samples <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&#39;HIC00&#39;</span>, <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">8</span>,<span class="dv">9</span>)) <span class="co"># Sample names</span></span>
+<span id="cb50-15"><a href="hi-c-workflow.html#cb50-15" aria-hidden="true" tabindex="-1"></a>res <span class="ot">&lt;-</span> <span class="dv">100000</span>                          <span class="co"># Data resolution</span></span>
+<span id="cb50-16"><a href="hi-c-workflow.html#cb50-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-17"><a href="hi-c-workflow.html#cb50-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Read data</span></span>
+<span id="cb50-18"><a href="hi-c-workflow.html#cb50-18" aria-hidden="true" tabindex="-1"></a>sample_list <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb50-19"><a href="hi-c-workflow.html#cb50-19" aria-hidden="true" tabindex="-1"></a>chr_list <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb50-20"><a href="hi-c-workflow.html#cb50-20" aria-hidden="true" tabindex="-1"></a>wd <span class="ot">&lt;-</span> <span class="st">&#39;/home/suvar/GEO/&#39;</span></span>
+<span id="cb50-21"><a href="hi-c-workflow.html#cb50-21" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(samples)) {</span>
+<span id="cb50-22"><a href="hi-c-workflow.html#cb50-22" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(chr)) {</span>
+<span id="cb50-23"><a href="hi-c-workflow.html#cb50-23" aria-hidden="true" tabindex="-1"></a>    chr_list[[i]] <span class="ot">&lt;-</span> <span class="fu">read_tsv</span>(<span class="fu">paste0</span>(wd, samples[j], <span class="st">&#39;/&#39;</span>,</span>
+<span id="cb50-24"><a href="hi-c-workflow.html#cb50-24" aria-hidden="true" tabindex="-1"></a>    samples[j], <span class="st">&#39;.NONE.&#39;</span>, chr[i], <span class="st">&#39;.&#39;</span>, res, <span class="st">&#39;.txt&#39;</span>),</span>
+<span id="cb50-25"><a href="hi-c-workflow.html#cb50-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">col_names =</span> <span class="cn">FALSE</span>) <span class="sc">%&gt;%</span> <span class="fu">as.data.table</span>()</span>
+<span id="cb50-26"><a href="hi-c-workflow.html#cb50-26" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add column indicating the chromosome</span></span>
+<span id="cb50-27"><a href="hi-c-workflow.html#cb50-27" aria-hidden="true" tabindex="-1"></a>    chr_list[[i]] <span class="ot">&lt;-</span> <span class="fu">cbind</span>(i, chr_list[[i]])</span>
+<span id="cb50-28"><a href="hi-c-workflow.html#cb50-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">colnames</span>(chr_list[[i]]) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&#39;chr&#39;</span>, <span class="st">&#39;region1&#39;</span>, <span class="st">&#39;region2&#39;</span>, <span class="st">&#39;IF&#39;</span>)</span>
+<span id="cb50-29"><a href="hi-c-workflow.html#cb50-29" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb50-30"><a href="hi-c-workflow.html#cb50-30" aria-hidden="true" tabindex="-1"></a>  sample_list[[j]] <span class="ot">&lt;-</span> chr_list</span>
+<span id="cb50-31"><a href="hi-c-workflow.html#cb50-31" aria-hidden="true" tabindex="-1"></a>  chr_list <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb50-32"><a href="hi-c-workflow.html#cb50-32" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb50-33"><a href="hi-c-workflow.html#cb50-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-34"><a href="hi-c-workflow.html#cb50-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Collapse separate chromosome lists into one table per sample</span></span>
+<span id="cb50-35"><a href="hi-c-workflow.html#cb50-35" aria-hidden="true" tabindex="-1"></a>sample_list <span class="ot">&lt;-</span> <span class="fu">lapply</span>(sample_list, rbindlist)</span>
+<span id="cb50-36"><a href="hi-c-workflow.html#cb50-36" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb50-37"><a href="hi-c-workflow.html#cb50-37" aria-hidden="true" tabindex="-1"></a>sample_list[[<span class="dv">1</span>]]</span></code></pre></div>
 </div>
-<div id="joint-normalization-of-hi-c" class="section level2">
+<div id="joint-normalization-of-hi-c" class="section level2" number="6.4">
 <h2><span class="header-section-number">6.4</span> Joint normalization of Hi-C</h2>
-<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb51-1" title="1"><span class="kw">library</span>(pander)</a>
-<a class="sourceLine" id="cb51-2" title="2"><span class="co"># Create a Hicexp object for use by multiHiCcompare (~10 min)</span></a>
-<a class="sourceLine" id="cb51-3" title="3"><span class="co"># Four objects are assigned into two groups</span></a>
-<a class="sourceLine" id="cb51-4" title="4">rao2017 &lt;-<span class="st"> </span><span class="kw">make_hicexp</span>(<span class="dt">data_list =</span> sample_list, <span class="dt">groups =</span> <span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">2</span>))</a>
-<a class="sourceLine" id="cb51-5" title="5">rao2017 <span class="co"># class(rao2017)</span></a>
-<a class="sourceLine" id="cb51-6" title="6"></a>
-<a class="sourceLine" id="cb51-7" title="7"><span class="co"># view the IF information</span></a>
-<a class="sourceLine" id="cb51-8" title="8"><span class="kw">hic_table</span>(rao2017)</a>
-<a class="sourceLine" id="cb51-9" title="9"></a>
-<a class="sourceLine" id="cb51-10" title="10"><span class="co"># MD plots before normalization</span></a>
-<a class="sourceLine" id="cb51-11" title="11"><span class="kw">MD_hicexp</span>(rao2017, <span class="dt">plot.chr =</span> <span class="dv">1</span>, <span class="dt">plot.loess =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
-<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb52-1" title="1"><span class="co"># Normalize (~2 min)</span></a>
-<a class="sourceLine" id="cb52-2" title="2">rao2017 &lt;-<span class="st"> </span><span class="kw">fastlo</span>(rao2017) <span class="co"># cyclic loesss normalisation is also available</span></a>
-<a class="sourceLine" id="cb52-3" title="3"></a>
-<a class="sourceLine" id="cb52-4" title="4"><span class="co"># Plot normalization results</span></a>
-<a class="sourceLine" id="cb52-5" title="5"><span class="kw">MD_hicexp</span>(rao2017, <span class="dt">plot.chr =</span> <span class="dv">1</span>, <span class="dt">plot.loess =</span> <span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb52-6" title="6"></a>
-<a class="sourceLine" id="cb52-7" title="7"><span class="co"># Print normalized IFs</span></a>
-<a class="sourceLine" id="cb52-8" title="8">pander<span class="op">::</span><span class="kw">pandoc.table</span>(<span class="kw">head</span>(<span class="kw">hic_table</span>(rao2017)))</a>
-<a class="sourceLine" id="cb52-9" title="9"></a>
-<a class="sourceLine" id="cb52-10" title="10"><span class="kw">library</span>(BiocParallel)</a>
-<a class="sourceLine" id="cb52-11" title="11"><span class="co"># Check how many cores are available</span></a>
-<a class="sourceLine" id="cb52-12" title="12">numCores &lt;-<span class="st"> </span>parallel<span class="op">::</span><span class="kw">detectCores</span>()</a>
-<a class="sourceLine" id="cb52-13" title="13"><span class="co"># Set the number of cores at least one less than the total number</span></a>
-<a class="sourceLine" id="cb52-14" title="14"></a>
-<a class="sourceLine" id="cb52-15" title="15"><span class="cf">if</span>(<span class="kw">Sys.info</span>()[<span class="st">&#39;sysname&#39;</span>] <span class="op">==</span><span class="st"> &#39;Windows&#39;</span>) {</a>
-<a class="sourceLine" id="cb52-16" title="16">  <span class="co"># Windows settings</span></a>
-<a class="sourceLine" id="cb52-17" title="17">  <span class="kw">register</span>(<span class="kw">SnowParam</span>(<span class="dt">workers =</span> numCores<span class="dv">-1</span>),</a>
-<a class="sourceLine" id="cb52-18" title="18">  <span class="dt">default =</span> <span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb52-19" title="19">  }<span class="cf">else</span> {</a>
-<a class="sourceLine" id="cb52-20" title="20">  <span class="co"># Unix settings</span></a>
-<a class="sourceLine" id="cb52-21" title="21">  <span class="kw">register</span>(<span class="kw">MulticoreParam</span>(<span class="dt">workers =</span> numCores<span class="dv">-1</span>),</a>
-<a class="sourceLine" id="cb52-22" title="22">  <span class="dt">default =</span> <span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb52-23" title="23">  }</a></code></pre></div>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="hi-c-workflow.html#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pander)</span>
+<span id="cb51-2"><a href="hi-c-workflow.html#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a Hicexp object for use by multiHiCcompare (~10 min)</span></span>
+<span id="cb51-3"><a href="hi-c-workflow.html#cb51-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Four objects are assigned into two groups</span></span>
+<span id="cb51-4"><a href="hi-c-workflow.html#cb51-4" aria-hidden="true" tabindex="-1"></a>rao2017 <span class="ot">&lt;-</span> <span class="fu">make_hicexp</span>(<span class="at">data_list =</span> sample_list, <span class="at">groups =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">2</span>))</span>
+<span id="cb51-5"><a href="hi-c-workflow.html#cb51-5" aria-hidden="true" tabindex="-1"></a>rao2017 <span class="co"># class(rao2017)</span></span>
+<span id="cb51-6"><a href="hi-c-workflow.html#cb51-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-7"><a href="hi-c-workflow.html#cb51-7" aria-hidden="true" tabindex="-1"></a><span class="co"># view the IF information</span></span>
+<span id="cb51-8"><a href="hi-c-workflow.html#cb51-8" aria-hidden="true" tabindex="-1"></a><span class="fu">hic_table</span>(rao2017)</span>
+<span id="cb51-9"><a href="hi-c-workflow.html#cb51-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-10"><a href="hi-c-workflow.html#cb51-10" aria-hidden="true" tabindex="-1"></a><span class="co"># MD plots before normalization</span></span>
+<span id="cb51-11"><a href="hi-c-workflow.html#cb51-11" aria-hidden="true" tabindex="-1"></a><span class="fu">MD_hicexp</span>(rao2017, <span class="at">plot.chr =</span> <span class="dv">1</span>, <span class="at">plot.loess =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="hi-c-workflow.html#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Normalize (~2 min)</span></span>
+<span id="cb52-2"><a href="hi-c-workflow.html#cb52-2" aria-hidden="true" tabindex="-1"></a>rao2017 <span class="ot">&lt;-</span> <span class="fu">fastlo</span>(rao2017) <span class="co"># cyclic loesss normalisation is also available</span></span>
+<span id="cb52-3"><a href="hi-c-workflow.html#cb52-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-4"><a href="hi-c-workflow.html#cb52-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot normalization results</span></span>
+<span id="cb52-5"><a href="hi-c-workflow.html#cb52-5" aria-hidden="true" tabindex="-1"></a><span class="fu">MD_hicexp</span>(rao2017, <span class="at">plot.chr =</span> <span class="dv">1</span>, <span class="at">plot.loess =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb52-6"><a href="hi-c-workflow.html#cb52-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-7"><a href="hi-c-workflow.html#cb52-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Print normalized IFs</span></span>
+<span id="cb52-8"><a href="hi-c-workflow.html#cb52-8" aria-hidden="true" tabindex="-1"></a>pander<span class="sc">::</span><span class="fu">pandoc.table</span>(<span class="fu">head</span>(<span class="fu">hic_table</span>(rao2017)))</span>
+<span id="cb52-9"><a href="hi-c-workflow.html#cb52-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-10"><a href="hi-c-workflow.html#cb52-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(BiocParallel)</span>
+<span id="cb52-11"><a href="hi-c-workflow.html#cb52-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Check how many cores are available</span></span>
+<span id="cb52-12"><a href="hi-c-workflow.html#cb52-12" aria-hidden="true" tabindex="-1"></a>numCores <span class="ot">&lt;-</span> parallel<span class="sc">::</span><span class="fu">detectCores</span>()</span>
+<span id="cb52-13"><a href="hi-c-workflow.html#cb52-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Set the number of cores at least one less than the total number</span></span>
+<span id="cb52-14"><a href="hi-c-workflow.html#cb52-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-15"><a href="hi-c-workflow.html#cb52-15" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="fu">Sys.info</span>()[<span class="st">&#39;sysname&#39;</span>] <span class="sc">==</span> <span class="st">&#39;Windows&#39;</span>) {</span>
+<span id="cb52-16"><a href="hi-c-workflow.html#cb52-16" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Windows settings</span></span>
+<span id="cb52-17"><a href="hi-c-workflow.html#cb52-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">register</span>(<span class="fu">SnowParam</span>(<span class="at">workers =</span> numCores<span class="dv">-1</span>),</span>
+<span id="cb52-18"><a href="hi-c-workflow.html#cb52-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">default =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb52-19"><a href="hi-c-workflow.html#cb52-19" aria-hidden="true" tabindex="-1"></a>  }<span class="cf">else</span> {</span>
+<span id="cb52-20"><a href="hi-c-workflow.html#cb52-20" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Unix settings</span></span>
+<span id="cb52-21"><a href="hi-c-workflow.html#cb52-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">register</span>(<span class="fu">MulticoreParam</span>(<span class="at">workers =</span> numCores<span class="dv">-1</span>),</span>
+<span id="cb52-22"><a href="hi-c-workflow.html#cb52-22" aria-hidden="true" tabindex="-1"></a>  <span class="at">default =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb52-23"><a href="hi-c-workflow.html#cb52-23" aria-hidden="true" tabindex="-1"></a>  }</span></code></pre></div>
 </div>
-<div id="difference-detection" class="section level2">
+<div id="difference-detection" class="section level2" number="6.5">
 <h2><span class="header-section-number">6.5</span> Difference detection</h2>
-<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb53-1" title="1"><span class="co"># Perform exact test (~10 min)</span></a>
-<a class="sourceLine" id="cb53-2" title="2"><span class="co"># May use &quot;parallel = TRUE&quot; option to speed up computations</span></a>
-<a class="sourceLine" id="cb53-3" title="3">rao2017 &lt;-<span class="st"> </span><span class="kw">hic_exactTest</span>(rao2017, <span class="dt">parallel =</span> <span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb53-4" title="4"><span class="co"># Plot a composite MD plot with the results of a comparison</span></a>
-<a class="sourceLine" id="cb53-5" title="5"><span class="kw">MD_composite</span>(rao2017,<span class="dt">plot.chr =</span> <span class="dv">1</span>)</a>
-<a class="sourceLine" id="cb53-6" title="6"><span class="co"># Print results as a data frame</span></a>
-<a class="sourceLine" id="cb53-7" title="7">pander<span class="op">::</span><span class="kw">pandoc.table</span>(<span class="kw">head</span>(<span class="kw">results</span>(rao2017)))</a>
-<a class="sourceLine" id="cb53-8" title="8"></a>
-<a class="sourceLine" id="cb53-9" title="9"><span class="co"># Save the Hicexp object</span></a>
-<a class="sourceLine" id="cb53-10" title="10"><span class="kw">save</span>(rao2017, <span class="dt">file =</span> <span class="kw">paste0</span>(wd,<span class="st">&#39;rao2017.RDA&#39;</span>))</a>
-<a class="sourceLine" id="cb53-11" title="11"><span class="co"># To start the downstream analysis</span></a>
-<a class="sourceLine" id="cb53-12" title="12"><span class="co"># without re-running multiHiCcompare load the saved file</span></a>
-<a class="sourceLine" id="cb53-13" title="13"><span class="co"># load(paste0(wd,&#39;rao2017.RDA&#39;))</span></a></code></pre></div>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="hi-c-workflow.html#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform exact test (~10 min)</span></span>
+<span id="cb53-2"><a href="hi-c-workflow.html#cb53-2" aria-hidden="true" tabindex="-1"></a><span class="co"># May use &quot;parallel = TRUE&quot; option to speed up computations</span></span>
+<span id="cb53-3"><a href="hi-c-workflow.html#cb53-3" aria-hidden="true" tabindex="-1"></a>rao2017 <span class="ot">&lt;-</span> <span class="fu">hic_exactTest</span>(rao2017, <span class="at">parallel =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb53-4"><a href="hi-c-workflow.html#cb53-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot a composite MD plot with the results of a comparison</span></span>
+<span id="cb53-5"><a href="hi-c-workflow.html#cb53-5" aria-hidden="true" tabindex="-1"></a><span class="fu">MD_composite</span>(rao2017,<span class="at">plot.chr =</span> <span class="dv">1</span>)</span>
+<span id="cb53-6"><a href="hi-c-workflow.html#cb53-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Print results as a data frame</span></span>
+<span id="cb53-7"><a href="hi-c-workflow.html#cb53-7" aria-hidden="true" tabindex="-1"></a>pander<span class="sc">::</span><span class="fu">pandoc.table</span>(<span class="fu">head</span>(<span class="fu">results</span>(rao2017)))</span>
+<span id="cb53-8"><a href="hi-c-workflow.html#cb53-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-9"><a href="hi-c-workflow.html#cb53-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the Hicexp object</span></span>
+<span id="cb53-10"><a href="hi-c-workflow.html#cb53-10" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(rao2017, <span class="at">file =</span> <span class="fu">paste0</span>(wd,<span class="st">&#39;rao2017.RDA&#39;</span>))</span>
+<span id="cb53-11"><a href="hi-c-workflow.html#cb53-11" aria-hidden="true" tabindex="-1"></a><span class="co"># To start the downstream analysis</span></span>
+<span id="cb53-12"><a href="hi-c-workflow.html#cb53-12" aria-hidden="true" tabindex="-1"></a><span class="co"># without re-running multiHiCcompare load the saved file</span></span>
+<span id="cb53-13"><a href="hi-c-workflow.html#cb53-13" aria-hidden="true" tabindex="-1"></a><span class="co"># load(paste0(wd,&#39;rao2017.RDA&#39;))</span></span></code></pre></div>
 
 </div>
 </div>

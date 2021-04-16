@@ -33,6 +33,7 @@
   
 <link rel="prev" href="analyis-of-new-generation-sequencing-data-in-r.html"/>
 <link rel="next" href="differential-expression-analysis-using-basic-r.html"/>
+<script src="libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -53,25 +54,27 @@
 
 
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
+    border: none; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -80,9 +83,9 @@ pre.numberSource a.sourceLine::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {  }
+  {   }
 @media screen {
-a.sourceLine::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -132,21 +135,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a></li>
-<li class="chapter" data-level="2" data-path="analyis-of-new-generation-sequencing-data-in-r.html"><a href="analyis-of-new-generation-sequencing-data-in-r.html"><i class="fa fa-check"></i><b>2</b> Analyis of new generation sequencing data in R</a><ul>
+<li class="chapter" data-level="2" data-path="analyis-of-new-generation-sequencing-data-in-r.html"><a href="analyis-of-new-generation-sequencing-data-in-r.html"><i class="fa fa-check"></i><b>2</b> Analyis of new generation sequencing data in R</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="analyis-of-new-generation-sequencing-data-in-r.html"><a href="analyis-of-new-generation-sequencing-data-in-r.html#get-fastq-from-sra"><i class="fa fa-check"></i><b>2.1</b> Get fastq from SRA</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="get-fastq-from-sra-database.html"><a href="get-fastq-from-sra-database.html"><i class="fa fa-check"></i><b>3</b> Get fastq from SRA database</a><ul>
+<li class="chapter" data-level="3" data-path="get-fastq-from-sra-database.html"><a href="get-fastq-from-sra-database.html"><i class="fa fa-check"></i><b>3</b> Get fastq from SRA database</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="get-fastq-from-sra-database.html"><a href="get-fastq-from-sra-database.html#get-fastq-from-sra-database-1"><i class="fa fa-check"></i><b>3.1</b> Get fastq from SRA database</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="differential-expression-analysis-using-basic-r.html"><a href="differential-expression-analysis-using-basic-r.html"><i class="fa fa-check"></i><b>4</b> Differential expression analysis using basic R</a><ul>
+<li class="chapter" data-level="4" data-path="differential-expression-analysis-using-basic-r.html"><a href="differential-expression-analysis-using-basic-r.html"><i class="fa fa-check"></i><b>4</b> Differential expression analysis using basic R</a>
+<ul>
 <li class="chapter" data-level="4.1" data-path="differential-expression-analysis-using-basic-r.html"><a href="differential-expression-analysis-using-basic-r.html#gene-expression-analysis-of-histone-deacetylase-1-hdac1-knockout-mouse."><i class="fa fa-check"></i><b>4.1</b> Gene expression analysis of histone deacetylase 1 (HDAC1) knockout mouse.</a></li>
 <li class="chapter" data-level="4.2" data-path="differential-expression-analysis-using-basic-r.html"><a href="differential-expression-analysis-using-basic-r.html#sources"><i class="fa fa-check"></i><b>4.2</b> Sources</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="genome-wide-associated-studies-gwas.html"><a href="genome-wide-associated-studies-gwas.html"><i class="fa fa-check"></i><b>5</b> Genome Wide Associated Studies (GWAS)"</a><ul>
+<li class="chapter" data-level="5" data-path="genome-wide-associated-studies-gwas.html"><a href="genome-wide-associated-studies-gwas.html"><i class="fa fa-check"></i><b>5</b> Genome Wide Associated Studies (GWAS)"</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="genome-wide-associated-studies-gwas.html"><a href="genome-wide-associated-studies-gwas.html#snp-analysis-using-snpasoc-r-package"><i class="fa fa-check"></i><b>5.1</b> SNP analysis using SNPasoc R package</a></li>
 <li class="chapter" data-level="5.2" data-path="genome-wide-associated-studies-gwas.html"><a href="genome-wide-associated-studies-gwas.html#gwas-using-plink"><i class="fa fa-check"></i><b>5.2</b> GWAS using PLINK</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="hi-c-workflow.html"><a href="hi-c-workflow.html"><i class="fa fa-check"></i><b>6</b> Hi-C workflow</a><ul>
+<li class="chapter" data-level="6" data-path="hi-c-workflow.html"><a href="hi-c-workflow.html"><i class="fa fa-check"></i><b>6</b> Hi-C workflow</a>
+<ul>
 <li class="chapter" data-level="6.1" data-path="hi-c-workflow.html"><a href="hi-c-workflow.html#using-straw-tool-to-extract-contact-matrix-from-.hic-files"><i class="fa fa-check"></i><b>6.1</b> Using straw tool to extract contact matrix from .hic files</a></li>
 <li class="chapter" data-level="6.2" data-path="hi-c-workflow.html"><a href="hi-c-workflow.html#hic-pro-pipeline"><i class="fa fa-check"></i><b>6.2</b> HiC-Pro pipeline</a></li>
 <li class="chapter" data-level="6.3" data-path="hi-c-workflow.html"><a href="hi-c-workflow.html#multihic-compare-for-compare-of-2-hi-c-datasets-rao-et-al.-2017"><i class="fa fa-check"></i><b>6.3</b> multiHiC compare for compare of 2 Hi-C datasets (Rao et al. 2017)</a></li>
@@ -173,67 +181,67 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="get-fastq-from-sra-database" class="section level1">
+<div id="get-fastq-from-sra-database" class="section level1" number="3">
 <h1><span class="header-section-number">Chapter 3</span> Get fastq from SRA database</h1>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw">library</span>(SRAdb) <span class="co"># SRA database</span></a>
-<a class="sourceLine" id="cb2-2" title="2"><span class="kw">dir.create</span>(<span class="st">&quot;~/SRA&quot;</span>)</a>
-<a class="sourceLine" id="cb2-3" title="3"><span class="kw">setwd</span>(<span class="st">&quot;~/SRA&quot;</span>)</a>
-<a class="sourceLine" id="cb2-4" title="4"></a>
-<a class="sourceLine" id="cb2-5" title="5"><span class="co">## Create database</span></a>
-<a class="sourceLine" id="cb2-6" title="6">sqlfile &lt;-<span class="st">&#39;SRAmetadb.sqlite&#39;</span></a>
-<a class="sourceLine" id="cb2-7" title="7"><span class="co"># load database [~3 Gb, 60 Gb on disc!!!]</span></a>
-<a class="sourceLine" id="cb2-8" title="8"><span class="cf">if</span>(<span class="op">!</span><span class="kw">file.exists</span>(<span class="st">&#39;SRAmetadb.sqlite&#39;</span>)) sqlfile &lt;&lt;-<span class="st"> </span><span class="kw">getSRAdbFile</span>()</a>
-<a class="sourceLine" id="cb2-9" title="9"><span class="co"># connect database</span></a>
-<a class="sourceLine" id="cb2-10" title="10">sra_con &lt;-<span class="st"> </span><span class="kw">dbConnect</span>(<span class="kw">SQLite</span>(), sqlfile)</a>
-<a class="sourceLine" id="cb2-11" title="11"></a>
-<a class="sourceLine" id="cb2-12" title="12"><span class="co">## get info for SRA from created database</span></a>
-<a class="sourceLine" id="cb2-13" title="13">sraInf &lt;-<span class="st"> </span><span class="kw">getSRAinfo</span>(<span class="st">&quot;SRP045534&quot;</span>, sra_con, <span class="dt">sraType=</span><span class="st">&quot;sra&quot;</span>)</a>
-<a class="sourceLine" id="cb2-14" title="14">sraInf</a>
-<a class="sourceLine" id="cb2-15" title="15"></a>
-<a class="sourceLine" id="cb2-16" title="16"><span class="co"># download SRA</span></a>
-<a class="sourceLine" id="cb2-17" title="17"><span class="co"># get SRA using SRA info [~ 5 Gb]</span></a>
-<a class="sourceLine" id="cb2-18" title="18"><span class="kw">sapply</span>(sraInf<span class="op">$</span>run, <span class="cf">function</span>(x) <span class="kw">try</span>(<span class="kw">getSRAfile</span>(x, sra_con, <span class="dt">fileType=</span><span class="st">&quot;sra&quot;</span>), <span class="dt">silent=</span><span class="ot">TRUE</span>))</a></code></pre></div>
-<div id="get-fastq-from-sra-database-1" class="section level2">
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="get-fastq-from-sra-database.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(SRAdb) <span class="co"># SRA database</span></span>
+<span id="cb2-2"><a href="get-fastq-from-sra-database.html#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="st">&quot;~/SRA&quot;</span>)</span>
+<span id="cb2-3"><a href="get-fastq-from-sra-database.html#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~/SRA&quot;</span>)</span>
+<span id="cb2-4"><a href="get-fastq-from-sra-database.html#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="get-fastq-from-sra-database.html#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="do">## Create database</span></span>
+<span id="cb2-6"><a href="get-fastq-from-sra-database.html#cb2-6" aria-hidden="true" tabindex="-1"></a>sqlfile <span class="ot">&lt;-</span><span class="st">&#39;SRAmetadb.sqlite&#39;</span></span>
+<span id="cb2-7"><a href="get-fastq-from-sra-database.html#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># load database [~3 Gb, 60 Gb on disc!!!]</span></span>
+<span id="cb2-8"><a href="get-fastq-from-sra-database.html#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">file.exists</span>(<span class="st">&#39;SRAmetadb.sqlite&#39;</span>)) sqlfile <span class="ot">&lt;&lt;-</span> <span class="fu">getSRAdbFile</span>()</span>
+<span id="cb2-9"><a href="get-fastq-from-sra-database.html#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># connect database</span></span>
+<span id="cb2-10"><a href="get-fastq-from-sra-database.html#cb2-10" aria-hidden="true" tabindex="-1"></a>sra_con <span class="ot">&lt;-</span> <span class="fu">dbConnect</span>(<span class="fu">SQLite</span>(), sqlfile)</span>
+<span id="cb2-11"><a href="get-fastq-from-sra-database.html#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="get-fastq-from-sra-database.html#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="do">## get info for SRA from created database</span></span>
+<span id="cb2-13"><a href="get-fastq-from-sra-database.html#cb2-13" aria-hidden="true" tabindex="-1"></a>sraInf <span class="ot">&lt;-</span> <span class="fu">getSRAinfo</span>(<span class="st">&quot;SRP045534&quot;</span>, sra_con, <span class="at">sraType=</span><span class="st">&quot;sra&quot;</span>)</span>
+<span id="cb2-14"><a href="get-fastq-from-sra-database.html#cb2-14" aria-hidden="true" tabindex="-1"></a>sraInf</span>
+<span id="cb2-15"><a href="get-fastq-from-sra-database.html#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="get-fastq-from-sra-database.html#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co"># download SRA</span></span>
+<span id="cb2-17"><a href="get-fastq-from-sra-database.html#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="co"># get SRA using SRA info [~ 5 Gb]</span></span>
+<span id="cb2-18"><a href="get-fastq-from-sra-database.html#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="fu">sapply</span>(sraInf<span class="sc">$</span>run, <span class="cf">function</span>(x) <span class="fu">try</span>(<span class="fu">getSRAfile</span>(x, sra_con, <span class="at">fileType=</span><span class="st">&quot;sra&quot;</span>), <span class="at">silent=</span><span class="cn">TRUE</span>))</span></code></pre></div>
+<div id="get-fastq-from-sra-database-1" class="section level2" number="3.1">
 <h2><span class="header-section-number">3.1</span> Get fastq from SRA database</h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1"><span class="kw">library</span>(SRAdb) <span class="co"># SRA database</span></a>
-<a class="sourceLine" id="cb3-2" title="2"><span class="kw">dir.create</span>(<span class="st">&quot;~/SRA&quot;</span>)</a>
-<a class="sourceLine" id="cb3-3" title="3"><span class="kw">setwd</span>(<span class="st">&quot;~/SRA&quot;</span>)</a>
-<a class="sourceLine" id="cb3-4" title="4"></a>
-<a class="sourceLine" id="cb3-5" title="5"><span class="co">## Create database</span></a>
-<a class="sourceLine" id="cb3-6" title="6">sqlfile &lt;-<span class="st">&#39;SRAmetadb.sqlite&#39;</span></a>
-<a class="sourceLine" id="cb3-7" title="7"><span class="co"># load database [~3 Gb, 60 Gb on disc!!!]</span></a>
-<a class="sourceLine" id="cb3-8" title="8"><span class="cf">if</span>(<span class="op">!</span><span class="kw">file.exists</span>(<span class="st">&#39;SRAmetadb.sqlite&#39;</span>)) sqlfile &lt;&lt;-<span class="st"> </span><span class="kw">getSRAdbFile</span>()</a>
-<a class="sourceLine" id="cb3-9" title="9"><span class="co"># connect database</span></a>
-<a class="sourceLine" id="cb3-10" title="10">sra_con &lt;-<span class="st"> </span><span class="kw">dbConnect</span>(<span class="kw">SQLite</span>(), sqlfile)</a>
-<a class="sourceLine" id="cb3-11" title="11"></a>
-<a class="sourceLine" id="cb3-12" title="12"><span class="co">## get info for SRA from created database</span></a>
-<a class="sourceLine" id="cb3-13" title="13">sraInf &lt;-<span class="st"> </span><span class="kw">getSRAinfo</span>(<span class="st">&quot;SRP045534&quot;</span>, sra_con, <span class="dt">sraType=</span><span class="st">&quot;sra&quot;</span>)</a>
-<a class="sourceLine" id="cb3-14" title="14">sraInf</a>
-<a class="sourceLine" id="cb3-15" title="15"></a>
-<a class="sourceLine" id="cb3-16" title="16"><span class="co"># download SRA</span></a>
-<a class="sourceLine" id="cb3-17" title="17"><span class="co"># get SRA using SRA info [~ 5 Gb]</span></a>
-<a class="sourceLine" id="cb3-18" title="18"><span class="kw">sapply</span>(sraInf<span class="op">$</span>run, <span class="cf">function</span>(x) <span class="kw">try</span>(<span class="kw">getSRAfile</span>(x, sra_con, <span class="dt">fileType=</span><span class="st">&quot;sra&quot;</span>), <span class="dt">silent=</span><span class="ot">TRUE</span>))</a></code></pre></div>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"></a>
-<a class="sourceLine" id="cb4-2" title="2"><span class="co">## Alignment using Rsubread</span></a></code></pre></div>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1"><span class="kw">library</span>(Rsubread) <span class="co"># sequence alignment</span></a>
-<a class="sourceLine" id="cb5-2" title="2"></a>
-<a class="sourceLine" id="cb5-3" title="3">fastq.files &lt;-<span class="st"> </span><span class="kw">list.files</span>(<span class="dt">pattern =</span> <span class="st">&quot;.fastq.gz$&quot;</span>, <span class="dt">full.names =</span> <span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb5-4" title="4">fastq.files</a>
-<a class="sourceLine" id="cb5-5" title="5"></a>
-<a class="sourceLine" id="cb5-6" title="6"><span class="co"># build index</span></a>
-<a class="sourceLine" id="cb5-7" title="7"><span class="kw">buildindex</span>(<span class="dt">basename=</span><span class="st">&quot;mm10&quot;</span>, <span class="dt">reference=</span><span class="st">&quot;mm10.fa&quot;</span>)</a>
-<a class="sourceLine" id="cb5-8" title="8"></a>
-<a class="sourceLine" id="cb5-9" title="9"><span class="co"># alignment</span></a>
-<a class="sourceLine" id="cb5-10" title="10"><span class="kw">align</span>(fastq.files, <span class="dt">index=</span><span class="st">&quot;chr1_mm10&quot;</span>)</a>
-<a class="sourceLine" id="cb5-11" title="11"></a>
-<a class="sourceLine" id="cb5-12" title="12"><span class="co"># parameters</span></a>
-<a class="sourceLine" id="cb5-13" title="13"><span class="kw">args</span>(align)</a>
-<a class="sourceLine" id="cb5-14" title="14"></a>
-<a class="sourceLine" id="cb5-15" title="15"><span class="co"># check result</span></a>
-<a class="sourceLine" id="cb5-16" title="16">bam.files &lt;-<span class="st"> </span><span class="kw">list.files</span>(<span class="dt">pattern =</span> <span class="st">&quot;.BAM$&quot;</span>, <span class="dt">full.names =</span> <span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb5-17" title="17">bam.files</a>
-<a class="sourceLine" id="cb5-18" title="18"><span class="co"># properties of BAM files</span></a>
-<a class="sourceLine" id="cb5-19" title="19"><span class="kw">propmapped</span>(<span class="dt">files=</span>bam.files)</a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="get-fastq-from-sra-database.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(SRAdb) <span class="co"># SRA database</span></span>
+<span id="cb3-2"><a href="get-fastq-from-sra-database.html#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="st">&quot;~/SRA&quot;</span>)</span>
+<span id="cb3-3"><a href="get-fastq-from-sra-database.html#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~/SRA&quot;</span>)</span>
+<span id="cb3-4"><a href="get-fastq-from-sra-database.html#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="get-fastq-from-sra-database.html#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="do">## Create database</span></span>
+<span id="cb3-6"><a href="get-fastq-from-sra-database.html#cb3-6" aria-hidden="true" tabindex="-1"></a>sqlfile <span class="ot">&lt;-</span><span class="st">&#39;SRAmetadb.sqlite&#39;</span></span>
+<span id="cb3-7"><a href="get-fastq-from-sra-database.html#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># load database [~3 Gb, 60 Gb on disc!!!]</span></span>
+<span id="cb3-8"><a href="get-fastq-from-sra-database.html#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">file.exists</span>(<span class="st">&#39;SRAmetadb.sqlite&#39;</span>)) sqlfile <span class="ot">&lt;&lt;-</span> <span class="fu">getSRAdbFile</span>()</span>
+<span id="cb3-9"><a href="get-fastq-from-sra-database.html#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># connect database</span></span>
+<span id="cb3-10"><a href="get-fastq-from-sra-database.html#cb3-10" aria-hidden="true" tabindex="-1"></a>sra_con <span class="ot">&lt;-</span> <span class="fu">dbConnect</span>(<span class="fu">SQLite</span>(), sqlfile)</span>
+<span id="cb3-11"><a href="get-fastq-from-sra-database.html#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="get-fastq-from-sra-database.html#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="do">## get info for SRA from created database</span></span>
+<span id="cb3-13"><a href="get-fastq-from-sra-database.html#cb3-13" aria-hidden="true" tabindex="-1"></a>sraInf <span class="ot">&lt;-</span> <span class="fu">getSRAinfo</span>(<span class="st">&quot;SRP045534&quot;</span>, sra_con, <span class="at">sraType=</span><span class="st">&quot;sra&quot;</span>)</span>
+<span id="cb3-14"><a href="get-fastq-from-sra-database.html#cb3-14" aria-hidden="true" tabindex="-1"></a>sraInf</span>
+<span id="cb3-15"><a href="get-fastq-from-sra-database.html#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="get-fastq-from-sra-database.html#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="co"># download SRA</span></span>
+<span id="cb3-17"><a href="get-fastq-from-sra-database.html#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="co"># get SRA using SRA info [~ 5 Gb]</span></span>
+<span id="cb3-18"><a href="get-fastq-from-sra-database.html#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="fu">sapply</span>(sraInf<span class="sc">$</span>run, <span class="cf">function</span>(x) <span class="fu">try</span>(<span class="fu">getSRAfile</span>(x, sra_con, <span class="at">fileType=</span><span class="st">&quot;sra&quot;</span>), <span class="at">silent=</span><span class="cn">TRUE</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="get-fastq-from-sra-database.html#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-2"><a href="get-fastq-from-sra-database.html#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">## Alignment using Rsubread</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="get-fastq-from-sra-database.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(Rsubread) <span class="co"># sequence alignment</span></span>
+<span id="cb5-2"><a href="get-fastq-from-sra-database.html#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="get-fastq-from-sra-database.html#cb5-3" aria-hidden="true" tabindex="-1"></a>fastq.files <span class="ot">&lt;-</span> <span class="fu">list.files</span>(<span class="at">pattern =</span> <span class="st">&quot;.fastq.gz$&quot;</span>, <span class="at">full.names =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb5-4"><a href="get-fastq-from-sra-database.html#cb5-4" aria-hidden="true" tabindex="-1"></a>fastq.files</span>
+<span id="cb5-5"><a href="get-fastq-from-sra-database.html#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="get-fastq-from-sra-database.html#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># build index</span></span>
+<span id="cb5-7"><a href="get-fastq-from-sra-database.html#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="fu">buildindex</span>(<span class="at">basename=</span><span class="st">&quot;mm10&quot;</span>, <span class="at">reference=</span><span class="st">&quot;mm10.fa&quot;</span>)</span>
+<span id="cb5-8"><a href="get-fastq-from-sra-database.html#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="get-fastq-from-sra-database.html#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co"># alignment</span></span>
+<span id="cb5-10"><a href="get-fastq-from-sra-database.html#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="fu">align</span>(fastq.files, <span class="at">index=</span><span class="st">&quot;chr1_mm10&quot;</span>)</span>
+<span id="cb5-11"><a href="get-fastq-from-sra-database.html#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="get-fastq-from-sra-database.html#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="co"># parameters</span></span>
+<span id="cb5-13"><a href="get-fastq-from-sra-database.html#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="fu">args</span>(align)</span>
+<span id="cb5-14"><a href="get-fastq-from-sra-database.html#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-15"><a href="get-fastq-from-sra-database.html#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="co"># check result</span></span>
+<span id="cb5-16"><a href="get-fastq-from-sra-database.html#cb5-16" aria-hidden="true" tabindex="-1"></a>bam.files <span class="ot">&lt;-</span> <span class="fu">list.files</span>(<span class="at">pattern =</span> <span class="st">&quot;.BAM$&quot;</span>, <span class="at">full.names =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb5-17"><a href="get-fastq-from-sra-database.html#cb5-17" aria-hidden="true" tabindex="-1"></a>bam.files</span>
+<span id="cb5-18"><a href="get-fastq-from-sra-database.html#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="co"># properties of BAM files</span></span>
+<span id="cb5-19"><a href="get-fastq-from-sra-database.html#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="fu">propmapped</span>(<span class="at">files=</span>bam.files)</span></code></pre></div>
 
 </div>
 </div>
