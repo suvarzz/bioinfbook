@@ -33,7 +33,6 @@
   
 <link rel="prev" href="get-fastq-from-sra-database.html"/>
 <link rel="next" href="genome-wide-associated-studies-gwas.html"/>
-<script src="libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -54,27 +53,25 @@
 
 
 <style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
+    border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -83,9 +80,9 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  {  }
 @media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+a.sourceLine::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -135,26 +132,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a></li>
-<li class="chapter" data-level="2" data-path="analyis-of-new-generation-sequencing-data-in-r.html"><a href="analyis-of-new-generation-sequencing-data-in-r.html"><i class="fa fa-check"></i><b>2</b> Analyis of new generation sequencing data in R</a>
-<ul>
+<li class="chapter" data-level="2" data-path="analyis-of-new-generation-sequencing-data-in-r.html"><a href="analyis-of-new-generation-sequencing-data-in-r.html"><i class="fa fa-check"></i><b>2</b> Analyis of new generation sequencing data in R</a><ul>
 <li class="chapter" data-level="2.1" data-path="analyis-of-new-generation-sequencing-data-in-r.html"><a href="analyis-of-new-generation-sequencing-data-in-r.html#get-fastq-from-sra"><i class="fa fa-check"></i><b>2.1</b> Get fastq from SRA</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="get-fastq-from-sra-database.html"><a href="get-fastq-from-sra-database.html"><i class="fa fa-check"></i><b>3</b> Get fastq from SRA database</a>
-<ul>
+<li class="chapter" data-level="3" data-path="get-fastq-from-sra-database.html"><a href="get-fastq-from-sra-database.html"><i class="fa fa-check"></i><b>3</b> Get fastq from SRA database</a><ul>
 <li class="chapter" data-level="3.1" data-path="get-fastq-from-sra-database.html"><a href="get-fastq-from-sra-database.html#get-fastq-from-sra-database-1"><i class="fa fa-check"></i><b>3.1</b> Get fastq from SRA database</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="differential-expression-analysis-using-basic-r.html"><a href="differential-expression-analysis-using-basic-r.html"><i class="fa fa-check"></i><b>4</b> Differential expression analysis using basic R</a>
-<ul>
+<li class="chapter" data-level="4" data-path="differential-expression-analysis-using-basic-r.html"><a href="differential-expression-analysis-using-basic-r.html"><i class="fa fa-check"></i><b>4</b> Differential expression analysis using basic R</a><ul>
 <li class="chapter" data-level="4.1" data-path="differential-expression-analysis-using-basic-r.html"><a href="differential-expression-analysis-using-basic-r.html#gene-expression-analysis-of-histone-deacetylase-1-hdac1-knockout-mouse."><i class="fa fa-check"></i><b>4.1</b> Gene expression analysis of histone deacetylase 1 (HDAC1) knockout mouse.</a></li>
 <li class="chapter" data-level="4.2" data-path="differential-expression-analysis-using-basic-r.html"><a href="differential-expression-analysis-using-basic-r.html#sources"><i class="fa fa-check"></i><b>4.2</b> Sources</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="genome-wide-associated-studies-gwas.html"><a href="genome-wide-associated-studies-gwas.html"><i class="fa fa-check"></i><b>5</b> Genome Wide Associated Studies (GWAS)"</a>
-<ul>
+<li class="chapter" data-level="5" data-path="genome-wide-associated-studies-gwas.html"><a href="genome-wide-associated-studies-gwas.html"><i class="fa fa-check"></i><b>5</b> Genome Wide Associated Studies (GWAS)"</a><ul>
 <li class="chapter" data-level="5.1" data-path="genome-wide-associated-studies-gwas.html"><a href="genome-wide-associated-studies-gwas.html#snp-analysis-using-snpasoc-r-package"><i class="fa fa-check"></i><b>5.1</b> SNP analysis using SNPasoc R package</a></li>
 <li class="chapter" data-level="5.2" data-path="genome-wide-associated-studies-gwas.html"><a href="genome-wide-associated-studies-gwas.html#gwas-using-plink"><i class="fa fa-check"></i><b>5.2</b> GWAS using PLINK</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="hi-c-workflow.html"><a href="hi-c-workflow.html"><i class="fa fa-check"></i><b>6</b> Hi-C workflow</a>
-<ul>
+<li class="chapter" data-level="6" data-path="hi-c-workflow.html"><a href="hi-c-workflow.html"><i class="fa fa-check"></i><b>6</b> Hi-C workflow</a><ul>
 <li class="chapter" data-level="6.1" data-path="hi-c-workflow.html"><a href="hi-c-workflow.html#using-straw-tool-to-extract-contact-matrix-from-.hic-files"><i class="fa fa-check"></i><b>6.1</b> Using straw tool to extract contact matrix from .hic files</a></li>
 <li class="chapter" data-level="6.2" data-path="hi-c-workflow.html"><a href="hi-c-workflow.html#hic-pro-pipeline"><i class="fa fa-check"></i><b>6.2</b> HiC-Pro pipeline</a></li>
 <li class="chapter" data-level="6.3" data-path="hi-c-workflow.html"><a href="hi-c-workflow.html#multihic-compare-for-compare-of-2-hi-c-datasets-rao-et-al.-2017"><i class="fa fa-check"></i><b>6.3</b> multiHiC compare for compare of 2 Hi-C datasets (Rao et al. 2017)</a></li>
@@ -181,9 +173,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="differential-expression-analysis-using-basic-r" class="section level1" number="4">
+<div id="differential-expression-analysis-using-basic-r" class="section level1">
 <h1><span class="header-section-number">Chapter 4</span> Differential expression analysis using basic R</h1>
-<div id="gene-expression-analysis-of-histone-deacetylase-1-hdac1-knockout-mouse." class="section level2" number="4.1">
+<div id="gene-expression-analysis-of-histone-deacetylase-1-hdac1-knockout-mouse." class="section level2">
 <h2><span class="header-section-number">4.1</span> Gene expression analysis of histone deacetylase 1 (HDAC1) knockout mouse.</h2>
 <p>This short tutorial should help to understand the basic principal of gene expression analysis using simple dataset and nearly basic R.</p>
 <ul>
@@ -194,206 +186,220 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
 <li><em>R code</em>: Ahmed Moustafa</li>
 </ul>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="differential-expression-analysis-using-basic-r.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Read the data into R</span></span>
-<span id="cb6-2"><a href="differential-expression-analysis-using-basic-r.html#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span> (RCurl)</span>
-<span id="cb6-3"><a href="differential-expression-analysis-using-basic-r.html#cb6-3" aria-hidden="true" tabindex="-1"></a>url <span class="ot">=</span> <span class="fu">getURL</span> (<span class="st">&quot;http://bit.ly/GSE5583_data&quot;</span>, <span class="at">followlocation =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb6-4"><a href="differential-expression-analysis-using-basic-r.html#cb6-4" aria-hidden="true" tabindex="-1"></a>data <span class="ot">=</span> <span class="fu">as.matrix</span>(<span class="fu">read.table</span> (<span class="at">text =</span> url, <span class="at">row.names =</span> <span class="dv">1</span>, <span class="at">header =</span> T))</span>
-<span id="cb6-5"><a href="differential-expression-analysis-using-basic-r.html#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-6"><a href="differential-expression-analysis-using-basic-r.html#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Check the loaded dataset</span></span>
-<span id="cb6-7"><a href="differential-expression-analysis-using-basic-r.html#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(data) <span class="co"># Dimension of the dataset</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1"><span class="co"># Read the data into R</span></a>
+<a class="sourceLine" id="cb6-2" title="2"><span class="kw">library</span> (RCurl)</a>
+<a class="sourceLine" id="cb6-3" title="3">url =<span class="st"> </span><span class="kw">getURL</span> (<span class="st">&quot;http://bit.ly/GSE5583_data&quot;</span>, <span class="dt">followlocation =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb6-4" title="4">data =<span class="st"> </span><span class="kw">as.matrix</span>(<span class="kw">read.table</span> (<span class="dt">text =</span> url, <span class="dt">row.names =</span> <span class="dv">1</span>, <span class="dt">header =</span> T))</a>
+<a class="sourceLine" id="cb6-5" title="5"></a>
+<a class="sourceLine" id="cb6-6" title="6"><span class="co"># Check the loaded dataset</span></a>
+<a class="sourceLine" id="cb6-7" title="7"><span class="kw">dim</span>(data) <span class="co"># Dimension of the dataset</span></a></code></pre></div>
 <pre><code>## [1] 12488     6</code></pre>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="differential-expression-analysis-using-basic-r.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># data shows gene experssion levels in 6 samples:</span></span>
-<span id="cb8-2"><a href="differential-expression-analysis-using-basic-r.html#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co"># rows correspond to samples (3 wild type WT and 3 knock-out KO)</span></span>
-<span id="cb8-3"><a href="differential-expression-analysis-using-basic-r.html#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># columns correspond to genes ids</span></span>
-<span id="cb8-4"><a href="differential-expression-analysis-using-basic-r.html#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(data) <span class="co"># First few rows</span></span></code></pre></div>
-<pre><code>##           WT.GSM130365 WT.GSM130366 WT.GSM130367 KO.GSM130368 KO.GSM130369 KO.GSM130370
-## 100001_at         11.5          5.6         69.1         15.7         36.0         42.0
-## 100002_at         20.5         32.4         93.3         31.8         14.4         22.9
-## 100003_at         72.4         89.0         79.2         80.5        130.1         86.7
-## 100004_at        261.0        226.2        365.1        432.0        447.3        288.1
-## 100005_at       1086.2       1555.6       1487.1       1062.2       1365.9       1436.2
-## 100006_at         49.7         52.9         15.0         25.8         48.8         54.8</code></pre>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="differential-expression-analysis-using-basic-r.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="do">###################</span></span>
-<span id="cb10-2"><a href="differential-expression-analysis-using-basic-r.html#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Exploratory plots</span></span>
-<span id="cb10-3"><a href="differential-expression-analysis-using-basic-r.html#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="do">###################</span></span>
-<span id="cb10-4"><a href="differential-expression-analysis-using-basic-r.html#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-5"><a href="differential-expression-analysis-using-basic-r.html#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Check the behavior of the data</span></span>
-<span id="cb10-6"><a href="differential-expression-analysis-using-basic-r.html#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(data, <span class="at">col =</span> <span class="st">&quot;gray&quot;</span>, <span class="at">main=</span><span class="st">&quot;GSE5583 - Histogram&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" title="1"><span class="co"># data shows gene experssion levels in 6 samples:</span></a>
+<a class="sourceLine" id="cb8-2" title="2"><span class="co"># rows correspond to samples (3 wild type WT and 3 knock-out KO)</span></a>
+<a class="sourceLine" id="cb8-3" title="3"><span class="co"># columns correspond to genes ids</span></a>
+<a class="sourceLine" id="cb8-4" title="4"><span class="kw">head</span>(data) <span class="co"># First few rows</span></a></code></pre></div>
+<pre><code>##           WT.GSM130365 WT.GSM130366 WT.GSM130367 KO.GSM130368 KO.GSM130369
+## 100001_at         11.5          5.6         69.1         15.7         36.0
+## 100002_at         20.5         32.4         93.3         31.8         14.4
+## 100003_at         72.4         89.0         79.2         80.5        130.1
+## 100004_at        261.0        226.2        365.1        432.0        447.3
+## 100005_at       1086.2       1555.6       1487.1       1062.2       1365.9
+## 100006_at         49.7         52.9         15.0         25.8         48.8
+##           KO.GSM130370
+## 100001_at         42.0
+## 100002_at         22.9
+## 100003_at         86.7
+## 100004_at        288.1
+## 100005_at       1436.2
+## 100006_at         54.8</code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" title="1"><span class="co">###################</span></a>
+<a class="sourceLine" id="cb10-2" title="2"><span class="co"># Exploratory plots</span></a>
+<a class="sourceLine" id="cb10-3" title="3"><span class="co">###################</span></a>
+<a class="sourceLine" id="cb10-4" title="4"></a>
+<a class="sourceLine" id="cb10-5" title="5"><span class="co"># Check the behavior of the data</span></a>
+<a class="sourceLine" id="cb10-6" title="6"><span class="kw">hist</span>(data, <span class="dt">col =</span> <span class="st">&quot;gray&quot;</span>, <span class="dt">main=</span><span class="st">&quot;GSE5583 - Histogram&quot;</span>)</a></code></pre></div>
 <p><img src="bioinfbook_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="differential-expression-analysis-using-basic-r.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Log2 transformation (why?)</span></span>
-<span id="cb11-2"><a href="differential-expression-analysis-using-basic-r.html#cb11-2" aria-hidden="true" tabindex="-1"></a>data2 <span class="ot">=</span> <span class="fu">log2</span>(data)</span>
-<span id="cb11-3"><a href="differential-expression-analysis-using-basic-r.html#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-4"><a href="differential-expression-analysis-using-basic-r.html#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Check the behavior of the data after log-transformation</span></span>
-<span id="cb11-5"><a href="differential-expression-analysis-using-basic-r.html#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(data2, <span class="at">col =</span> <span class="st">&quot;gray&quot;</span>, <span class="at">main=</span><span class="st">&quot;GSE5583 (log2) - Histogram&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" title="1"><span class="co"># Log2 transformation (why?)</span></a>
+<a class="sourceLine" id="cb11-2" title="2">data2 =<span class="st"> </span><span class="kw">log2</span>(data)</a>
+<a class="sourceLine" id="cb11-3" title="3"></a>
+<a class="sourceLine" id="cb11-4" title="4"><span class="co"># Check the behavior of the data after log-transformation</span></a>
+<a class="sourceLine" id="cb11-5" title="5"><span class="kw">hist</span>(data2, <span class="dt">col =</span> <span class="st">&quot;gray&quot;</span>, <span class="dt">main=</span><span class="st">&quot;GSE5583 (log2) - Histogram&quot;</span>)</a></code></pre></div>
 <p><img src="bioinfbook_files/figure-html/unnamed-chunk-7-2.png" width="672" /></p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="differential-expression-analysis-using-basic-r.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Boxplot</span></span>
-<span id="cb12-2"><a href="differential-expression-analysis-using-basic-r.html#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(data2, <span class="at">col=</span><span class="fu">c</span>(<span class="st">&quot;darkgreen&quot;</span>, <span class="st">&quot;darkgreen&quot;</span>, <span class="st">&quot;darkgreen&quot;</span>,</span>
-<span id="cb12-3"><a href="differential-expression-analysis-using-basic-r.html#cb12-3" aria-hidden="true" tabindex="-1"></a>                     <span class="st">&quot;darkred&quot;</span>, <span class="st">&quot;darkred&quot;</span>, <span class="st">&quot;darkred&quot;</span>),</span>
-<span id="cb12-4"><a href="differential-expression-analysis-using-basic-r.html#cb12-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">main=</span><span class="st">&quot;GSE5583 - boxplots&quot;</span>, <span class="at">las=</span><span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" title="1"><span class="co"># Boxplot</span></a>
+<a class="sourceLine" id="cb12-2" title="2"><span class="kw">boxplot</span>(data2, <span class="dt">col=</span><span class="kw">c</span>(<span class="st">&quot;darkgreen&quot;</span>, <span class="st">&quot;darkgreen&quot;</span>, <span class="st">&quot;darkgreen&quot;</span>,</a>
+<a class="sourceLine" id="cb12-3" title="3">                     <span class="st">&quot;darkred&quot;</span>, <span class="st">&quot;darkred&quot;</span>, <span class="st">&quot;darkred&quot;</span>),</a>
+<a class="sourceLine" id="cb12-4" title="4">        <span class="dt">main=</span><span class="st">&quot;GSE5583 - boxplots&quot;</span>, <span class="dt">las=</span><span class="dv">2</span>)</a></code></pre></div>
 <p><img src="bioinfbook_files/figure-html/unnamed-chunk-7-3.png" width="672" /></p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="differential-expression-analysis-using-basic-r.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Hierarchical clustering of the &quot;samples&quot; based on</span></span>
-<span id="cb13-2"><a href="differential-expression-analysis-using-basic-r.html#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co"># the correlation coefficients of the expression values</span></span>
-<span id="cb13-3"><a href="differential-expression-analysis-using-basic-r.html#cb13-3" aria-hidden="true" tabindex="-1"></a>hc <span class="ot">=</span> <span class="fu">hclust</span>(<span class="fu">as.dist</span>(<span class="dv">1</span><span class="sc">-</span><span class="fu">cor</span>(data2)))</span>
-<span id="cb13-4"><a href="differential-expression-analysis-using-basic-r.html#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(hc, <span class="at">main=</span><span class="st">&quot;GSE5583 - Hierarchical Clustering&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" title="1"><span class="co"># Hierarchical clustering of the &quot;samples&quot; based on</span></a>
+<a class="sourceLine" id="cb13-2" title="2"><span class="co"># the correlation coefficients of the expression values</span></a>
+<a class="sourceLine" id="cb13-3" title="3">hc =<span class="st"> </span><span class="kw">hclust</span>(<span class="kw">as.dist</span>(<span class="dv">1</span><span class="op">-</span><span class="kw">cor</span>(data2)))</a>
+<a class="sourceLine" id="cb13-4" title="4"><span class="kw">plot</span>(hc, <span class="dt">main=</span><span class="st">&quot;GSE5583 - Hierarchical Clustering&quot;</span>)</a></code></pre></div>
 <p><img src="bioinfbook_files/figure-html/unnamed-chunk-7-4.png" width="672" /></p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="differential-expression-analysis-using-basic-r.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="do">#######################################</span></span>
-<span id="cb14-2"><a href="differential-expression-analysis-using-basic-r.html#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Differential expression (DE) analysis</span></span>
-<span id="cb14-3"><a href="differential-expression-analysis-using-basic-r.html#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="do">#######################################</span></span>
-<span id="cb14-4"><a href="differential-expression-analysis-using-basic-r.html#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-5"><a href="differential-expression-analysis-using-basic-r.html#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Separate the two conditions into two smaller data frames</span></span>
-<span id="cb14-6"><a href="differential-expression-analysis-using-basic-r.html#cb14-6" aria-hidden="true" tabindex="-1"></a>wt <span class="ot">=</span> data2[,<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>]</span>
-<span id="cb14-7"><a href="differential-expression-analysis-using-basic-r.html#cb14-7" aria-hidden="true" tabindex="-1"></a>ko <span class="ot">=</span> data2[,<span class="dv">4</span><span class="sc">:</span><span class="dv">6</span>]</span>
-<span id="cb14-8"><a href="differential-expression-analysis-using-basic-r.html#cb14-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-9"><a href="differential-expression-analysis-using-basic-r.html#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute the means of the samples of each condition</span></span>
-<span id="cb14-10"><a href="differential-expression-analysis-using-basic-r.html#cb14-10" aria-hidden="true" tabindex="-1"></a>wt.mean <span class="ot">=</span> <span class="fu">apply</span>(wt, <span class="dv">1</span>, mean)</span>
-<span id="cb14-11"><a href="differential-expression-analysis-using-basic-r.html#cb14-11" aria-hidden="true" tabindex="-1"></a>ko.mean <span class="ot">=</span> <span class="fu">apply</span>(ko, <span class="dv">1</span>, mean)</span>
-<span id="cb14-12"><a href="differential-expression-analysis-using-basic-r.html#cb14-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-13"><a href="differential-expression-analysis-using-basic-r.html#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(wt.mean)</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" title="1"><span class="co">#######################################</span></a>
+<a class="sourceLine" id="cb14-2" title="2"><span class="co"># Differential expression (DE) analysis</span></a>
+<a class="sourceLine" id="cb14-3" title="3"><span class="co">#######################################</span></a>
+<a class="sourceLine" id="cb14-4" title="4"></a>
+<a class="sourceLine" id="cb14-5" title="5"><span class="co"># Separate the two conditions into two smaller data frames</span></a>
+<a class="sourceLine" id="cb14-6" title="6">wt =<span class="st"> </span>data2[,<span class="dv">1</span><span class="op">:</span><span class="dv">3</span>]</a>
+<a class="sourceLine" id="cb14-7" title="7">ko =<span class="st"> </span>data2[,<span class="dv">4</span><span class="op">:</span><span class="dv">6</span>]</a>
+<a class="sourceLine" id="cb14-8" title="8"></a>
+<a class="sourceLine" id="cb14-9" title="9"><span class="co"># Compute the means of the samples of each condition</span></a>
+<a class="sourceLine" id="cb14-10" title="10">wt.mean =<span class="st"> </span><span class="kw">apply</span>(wt, <span class="dv">1</span>, mean)</a>
+<a class="sourceLine" id="cb14-11" title="11">ko.mean =<span class="st"> </span><span class="kw">apply</span>(ko, <span class="dv">1</span>, mean)</a>
+<a class="sourceLine" id="cb14-12" title="12"></a>
+<a class="sourceLine" id="cb14-13" title="13"><span class="kw">head</span>(wt.mean)</a></code></pre></div>
 <pre><code>## 100001_at 100002_at 100003_at 100004_at 100005_at 100006_at 
 ##  4.039868  5.306426  6.320360  8.120503 10.408872  5.089087</code></pre>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="differential-expression-analysis-using-basic-r.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(ko.mean)</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" title="1"><span class="kw">head</span>(ko.mean)</a></code></pre></div>
 <pre><code>## 100001_at 100002_at 100003_at 100004_at 100005_at 100006_at 
 ##  4.844978  4.452076  6.597451  8.576804 10.318839  5.358071</code></pre>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="differential-expression-analysis-using-basic-r.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Just get the maximum of all the means</span></span>
-<span id="cb18-2"><a href="differential-expression-analysis-using-basic-r.html#cb18-2" aria-hidden="true" tabindex="-1"></a>limit <span class="ot">=</span> <span class="fu">max</span>(wt.mean, ko.mean)</span>
-<span id="cb18-3"><a href="differential-expression-analysis-using-basic-r.html#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-4"><a href="differential-expression-analysis-using-basic-r.html#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Scatter plot</span></span>
-<span id="cb18-5"><a href="differential-expression-analysis-using-basic-r.html#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(ko.mean <span class="sc">~</span> wt.mean, <span class="at">xlab =</span> <span class="st">&quot;WT&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;KO&quot;</span>,</span>
-<span id="cb18-6"><a href="differential-expression-analysis-using-basic-r.html#cb18-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">&quot;GSE5583 - Scatter&quot;</span>, <span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>, limit), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, limit))</span>
-<span id="cb18-7"><a href="differential-expression-analysis-using-basic-r.html#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Diagonal line</span></span>
-<span id="cb18-8"><a href="differential-expression-analysis-using-basic-r.html#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" title="1"><span class="co"># Just get the maximum of all the means</span></a>
+<a class="sourceLine" id="cb18-2" title="2">limit =<span class="st"> </span><span class="kw">max</span>(wt.mean, ko.mean)</a>
+<a class="sourceLine" id="cb18-3" title="3"></a>
+<a class="sourceLine" id="cb18-4" title="4"><span class="co"># Scatter plot</span></a>
+<a class="sourceLine" id="cb18-5" title="5"><span class="kw">plot</span>(ko.mean <span class="op">~</span><span class="st"> </span>wt.mean, <span class="dt">xlab =</span> <span class="st">&quot;WT&quot;</span>, <span class="dt">ylab =</span> <span class="st">&quot;KO&quot;</span>,</a>
+<a class="sourceLine" id="cb18-6" title="6">     <span class="dt">main =</span> <span class="st">&quot;GSE5583 - Scatter&quot;</span>, <span class="dt">xlim =</span> <span class="kw">c</span>(<span class="dv">0</span>, limit), <span class="dt">ylim =</span> <span class="kw">c</span>(<span class="dv">0</span>, limit))</a>
+<a class="sourceLine" id="cb18-7" title="7"><span class="co"># Diagonal line</span></a>
+<a class="sourceLine" id="cb18-8" title="8"><span class="kw">abline</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dt">col =</span> <span class="st">&quot;red&quot;</span>)</a></code></pre></div>
 <p><img src="bioinfbook_files/figure-html/unnamed-chunk-7-5.png" width="672" /></p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="differential-expression-analysis-using-basic-r.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute fold-change (biological significance)</span></span>
-<span id="cb19-2"><a href="differential-expression-analysis-using-basic-r.html#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Difference between the means of the conditions</span></span>
-<span id="cb19-3"><a href="differential-expression-analysis-using-basic-r.html#cb19-3" aria-hidden="true" tabindex="-1"></a>fold <span class="ot">=</span> wt.mean <span class="sc">-</span> ko.mean</span>
-<span id="cb19-4"><a href="differential-expression-analysis-using-basic-r.html#cb19-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-5"><a href="differential-expression-analysis-using-basic-r.html#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Histogram of the fold differences</span></span>
-<span id="cb19-6"><a href="differential-expression-analysis-using-basic-r.html#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(fold, <span class="at">col =</span> <span class="st">&quot;gray&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb19-1" title="1"><span class="co"># Compute fold-change (biological significance)</span></a>
+<a class="sourceLine" id="cb19-2" title="2"><span class="co"># Difference between the means of the conditions</span></a>
+<a class="sourceLine" id="cb19-3" title="3">fold =<span class="st"> </span>wt.mean <span class="op">-</span><span class="st"> </span>ko.mean</a>
+<a class="sourceLine" id="cb19-4" title="4"></a>
+<a class="sourceLine" id="cb19-5" title="5"><span class="co"># Histogram of the fold differences</span></a>
+<a class="sourceLine" id="cb19-6" title="6"><span class="kw">hist</span>(fold, <span class="dt">col =</span> <span class="st">&quot;gray&quot;</span>)</a></code></pre></div>
 <p><img src="bioinfbook_files/figure-html/unnamed-chunk-7-6.png" width="672" /></p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="differential-expression-analysis-using-basic-r.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute statistical significance (using t-test)</span></span>
-<span id="cb20-2"><a href="differential-expression-analysis-using-basic-r.html#cb20-2" aria-hidden="true" tabindex="-1"></a>pvalue <span class="ot">=</span> <span class="cn">NULL</span> <span class="co"># Empty list for the p-values</span></span>
-<span id="cb20-3"><a href="differential-expression-analysis-using-basic-r.html#cb20-3" aria-hidden="true" tabindex="-1"></a>tstat <span class="ot">=</span> <span class="cn">NULL</span> <span class="co"># Empty list of the t test statistics</span></span>
-<span id="cb20-4"><a href="differential-expression-analysis-using-basic-r.html#cb20-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-5"><a href="differential-expression-analysis-using-basic-r.html#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span> <span class="sc">:</span> <span class="fu">nrow</span>(data)) { <span class="co"># For each gene : </span></span>
-<span id="cb20-6"><a href="differential-expression-analysis-using-basic-r.html#cb20-6" aria-hidden="true" tabindex="-1"></a>  x <span class="ot">=</span> wt[i,] <span class="co"># WT of gene number i</span></span>
-<span id="cb20-7"><a href="differential-expression-analysis-using-basic-r.html#cb20-7" aria-hidden="true" tabindex="-1"></a>  y <span class="ot">=</span> ko[i,] <span class="co"># KO of gene number i</span></span>
-<span id="cb20-8"><a href="differential-expression-analysis-using-basic-r.html#cb20-8" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb20-9"><a href="differential-expression-analysis-using-basic-r.html#cb20-9" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Compute t-test between the two conditions</span></span>
-<span id="cb20-10"><a href="differential-expression-analysis-using-basic-r.html#cb20-10" aria-hidden="true" tabindex="-1"></a>  t <span class="ot">=</span> <span class="fu">t.test</span>(x, y)</span>
-<span id="cb20-11"><a href="differential-expression-analysis-using-basic-r.html#cb20-11" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb20-12"><a href="differential-expression-analysis-using-basic-r.html#cb20-12" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Put the current p-value in the pvalues list</span></span>
-<span id="cb20-13"><a href="differential-expression-analysis-using-basic-r.html#cb20-13" aria-hidden="true" tabindex="-1"></a>  pvalue[i] <span class="ot">=</span> t<span class="sc">$</span>p.value</span>
-<span id="cb20-14"><a href="differential-expression-analysis-using-basic-r.html#cb20-14" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Put the current t-statistic in the tstats list</span></span>
-<span id="cb20-15"><a href="differential-expression-analysis-using-basic-r.html#cb20-15" aria-hidden="true" tabindex="-1"></a>  tstat[i] <span class="ot">=</span> t<span class="sc">$</span>statistic</span>
-<span id="cb20-16"><a href="differential-expression-analysis-using-basic-r.html#cb20-16" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb20-17"><a href="differential-expression-analysis-using-basic-r.html#cb20-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-18"><a href="differential-expression-analysis-using-basic-r.html#cb20-18" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(pvalue)</span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" title="1"><span class="co"># Compute statistical significance (using t-test)</span></a>
+<a class="sourceLine" id="cb20-2" title="2">pvalue =<span class="st"> </span><span class="ot">NULL</span> <span class="co"># Empty list for the p-values</span></a>
+<a class="sourceLine" id="cb20-3" title="3">tstat =<span class="st"> </span><span class="ot">NULL</span> <span class="co"># Empty list of the t test statistics</span></a>
+<a class="sourceLine" id="cb20-4" title="4"></a>
+<a class="sourceLine" id="cb20-5" title="5"><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span> <span class="op">:</span><span class="st"> </span><span class="kw">nrow</span>(data)) { <span class="co"># For each gene : </span></a>
+<a class="sourceLine" id="cb20-6" title="6">  x =<span class="st"> </span>wt[i,] <span class="co"># WT of gene number i</span></a>
+<a class="sourceLine" id="cb20-7" title="7">  y =<span class="st"> </span>ko[i,] <span class="co"># KO of gene number i</span></a>
+<a class="sourceLine" id="cb20-8" title="8">  </a>
+<a class="sourceLine" id="cb20-9" title="9">  <span class="co"># Compute t-test between the two conditions</span></a>
+<a class="sourceLine" id="cb20-10" title="10">  t =<span class="st"> </span><span class="kw">t.test</span>(x, y)</a>
+<a class="sourceLine" id="cb20-11" title="11">  </a>
+<a class="sourceLine" id="cb20-12" title="12">  <span class="co"># Put the current p-value in the pvalues list</span></a>
+<a class="sourceLine" id="cb20-13" title="13">  pvalue[i] =<span class="st"> </span>t<span class="op">$</span>p.value</a>
+<a class="sourceLine" id="cb20-14" title="14">  <span class="co"># Put the current t-statistic in the tstats list</span></a>
+<a class="sourceLine" id="cb20-15" title="15">  tstat[i] =<span class="st"> </span>t<span class="op">$</span>statistic</a>
+<a class="sourceLine" id="cb20-16" title="16">}</a>
+<a class="sourceLine" id="cb20-17" title="17"></a>
+<a class="sourceLine" id="cb20-18" title="18"><span class="kw">head</span>(pvalue)</a></code></pre></div>
 <pre><code>## [1] 0.5449730 0.3253745 0.3287830 0.1892376 0.6928410 0.7180077</code></pre>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="differential-expression-analysis-using-basic-r.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Histogram of p-values (-log10)</span></span>
-<span id="cb22-2"><a href="differential-expression-analysis-using-basic-r.html#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(<span class="sc">-</span><span class="fu">log10</span>(pvalue), <span class="at">col =</span> <span class="st">&quot;gray&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" title="1"><span class="co"># Histogram of p-values (-log10)</span></a>
+<a class="sourceLine" id="cb22-2" title="2"><span class="kw">hist</span>(<span class="op">-</span><span class="kw">log10</span>(pvalue), <span class="dt">col =</span> <span class="st">&quot;gray&quot;</span>)</a></code></pre></div>
 <p><img src="bioinfbook_files/figure-html/unnamed-chunk-7-7.png" width="672" /></p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="differential-expression-analysis-using-basic-r.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Volcano: put the biological significance (fold-change)</span></span>
-<span id="cb23-2"><a href="differential-expression-analysis-using-basic-r.html#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="co"># and statistical significance (p-value) in one plot</span></span>
-<span id="cb23-3"><a href="differential-expression-analysis-using-basic-r.html#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(fold, <span class="sc">-</span><span class="fu">log10</span>(pvalue), <span class="at">main =</span> <span class="st">&quot;GSE5583 - Volcano&quot;</span>)</span>
-<span id="cb23-4"><a href="differential-expression-analysis-using-basic-r.html#cb23-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-5"><a href="differential-expression-analysis-using-basic-r.html#cb23-5" aria-hidden="true" tabindex="-1"></a>fold_cutoff <span class="ot">=</span> <span class="dv">2</span></span>
-<span id="cb23-6"><a href="differential-expression-analysis-using-basic-r.html#cb23-6" aria-hidden="true" tabindex="-1"></a>pvalue_cutoff <span class="ot">=</span> <span class="fl">0.01</span></span>
-<span id="cb23-7"><a href="differential-expression-analysis-using-basic-r.html#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v =</span> fold_cutoff, <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>, <span class="at">lwd =</span> <span class="dv">3</span>)</span>
-<span id="cb23-8"><a href="differential-expression-analysis-using-basic-r.html#cb23-8" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v =</span> <span class="sc">-</span>fold_cutoff, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>, <span class="at">lwd =</span> <span class="dv">3</span>)</span>
-<span id="cb23-9"><a href="differential-expression-analysis-using-basic-r.html#cb23-9" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="sc">-</span><span class="fu">log10</span>(pvalue_cutoff), <span class="at">col =</span> <span class="st">&quot;green&quot;</span>, <span class="at">lwd =</span> <span class="dv">3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb23-1" title="1"><span class="co"># Volcano: put the biological significance (fold-change)</span></a>
+<a class="sourceLine" id="cb23-2" title="2"><span class="co"># and statistical significance (p-value) in one plot</span></a>
+<a class="sourceLine" id="cb23-3" title="3"><span class="kw">plot</span>(fold, <span class="op">-</span><span class="kw">log10</span>(pvalue), <span class="dt">main =</span> <span class="st">&quot;GSE5583 - Volcano&quot;</span>)</a>
+<a class="sourceLine" id="cb23-4" title="4"></a>
+<a class="sourceLine" id="cb23-5" title="5">fold_cutoff =<span class="st"> </span><span class="dv">2</span></a>
+<a class="sourceLine" id="cb23-6" title="6">pvalue_cutoff =<span class="st"> </span><span class="fl">0.01</span></a>
+<a class="sourceLine" id="cb23-7" title="7"><span class="kw">abline</span>(<span class="dt">v =</span> fold_cutoff, <span class="dt">col =</span> <span class="st">&quot;blue&quot;</span>, <span class="dt">lwd =</span> <span class="dv">3</span>)</a>
+<a class="sourceLine" id="cb23-8" title="8"><span class="kw">abline</span>(<span class="dt">v =</span> <span class="op">-</span>fold_cutoff, <span class="dt">col =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">lwd =</span> <span class="dv">3</span>)</a>
+<a class="sourceLine" id="cb23-9" title="9"><span class="kw">abline</span>(<span class="dt">h =</span> <span class="op">-</span><span class="kw">log10</span>(pvalue_cutoff), <span class="dt">col =</span> <span class="st">&quot;green&quot;</span>, <span class="dt">lwd =</span> <span class="dv">3</span>)</a></code></pre></div>
 <p><img src="bioinfbook_files/figure-html/unnamed-chunk-7-8.png" width="672" /></p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="differential-expression-analysis-using-basic-r.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Screen for the genes that satisfy the filtering criteria</span></span>
-<span id="cb24-2"><a href="differential-expression-analysis-using-basic-r.html#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-3"><a href="differential-expression-analysis-using-basic-r.html#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Fold-change filter for &quot;biological&quot; significance</span></span>
-<span id="cb24-4"><a href="differential-expression-analysis-using-basic-r.html#cb24-4" aria-hidden="true" tabindex="-1"></a>filter_by_fold <span class="ot">=</span> <span class="fu">abs</span>(fold) <span class="sc">&gt;=</span> fold_cutoff</span>
-<span id="cb24-5"><a href="differential-expression-analysis-using-basic-r.html#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(data2[filter_by_fold, ])</span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" title="1"><span class="co"># Screen for the genes that satisfy the filtering criteria</span></a>
+<a class="sourceLine" id="cb24-2" title="2"></a>
+<a class="sourceLine" id="cb24-3" title="3"><span class="co"># Fold-change filter for &quot;biological&quot; significance</span></a>
+<a class="sourceLine" id="cb24-4" title="4">filter_by_fold =<span class="st"> </span><span class="kw">abs</span>(fold) <span class="op">&gt;=</span><span class="st"> </span>fold_cutoff</a>
+<a class="sourceLine" id="cb24-5" title="5"><span class="kw">dim</span>(data2[filter_by_fold, ])</a></code></pre></div>
 <pre><code>## [1] 210   6</code></pre>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="differential-expression-analysis-using-basic-r.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># P-value filter for &quot;statistical&quot; significance</span></span>
-<span id="cb26-2"><a href="differential-expression-analysis-using-basic-r.html#cb26-2" aria-hidden="true" tabindex="-1"></a>filter_by_pvalue <span class="ot">=</span> pvalue <span class="sc">&lt;=</span> pvalue_cutoff</span>
-<span id="cb26-3"><a href="differential-expression-analysis-using-basic-r.html#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(data2[filter_by_pvalue, ])</span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" title="1"><span class="co"># P-value filter for &quot;statistical&quot; significance</span></a>
+<a class="sourceLine" id="cb26-2" title="2">filter_by_pvalue =<span class="st"> </span>pvalue <span class="op">&lt;=</span><span class="st"> </span>pvalue_cutoff</a>
+<a class="sourceLine" id="cb26-3" title="3"><span class="kw">dim</span>(data2[filter_by_pvalue, ])</a></code></pre></div>
 <pre><code>## [1] 429   6</code></pre>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="differential-expression-analysis-using-basic-r.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Combined filter (both biological and statistical)</span></span>
-<span id="cb28-2"><a href="differential-expression-analysis-using-basic-r.html#cb28-2" aria-hidden="true" tabindex="-1"></a>filter_combined <span class="ot">=</span> filter_by_fold <span class="sc">&amp;</span> filter_by_pvalue</span>
-<span id="cb28-3"><a href="differential-expression-analysis-using-basic-r.html#cb28-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-4"><a href="differential-expression-analysis-using-basic-r.html#cb28-4" aria-hidden="true" tabindex="-1"></a>filtered <span class="ot">=</span> data2[filter_combined,]</span>
-<span id="cb28-5"><a href="differential-expression-analysis-using-basic-r.html#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(filtered)</span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb28-1" title="1"><span class="co"># Combined filter (both biological and statistical)</span></a>
+<a class="sourceLine" id="cb28-2" title="2">filter_combined =<span class="st"> </span>filter_by_fold <span class="op">&amp;</span><span class="st"> </span>filter_by_pvalue</a>
+<a class="sourceLine" id="cb28-3" title="3"></a>
+<a class="sourceLine" id="cb28-4" title="4">filtered =<span class="st"> </span>data2[filter_combined,]</a>
+<a class="sourceLine" id="cb28-5" title="5"><span class="kw">dim</span>(filtered)</a></code></pre></div>
 <pre><code>## [1] 42  6</code></pre>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="differential-expression-analysis-using-basic-r.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(filtered)</span></code></pre></div>
-<pre><code>##             WT.GSM130365 WT.GSM130366 WT.GSM130367 KO.GSM130368 KO.GSM130369 KO.GSM130370
-## 100716_at       4.852998     4.906891     5.626439     7.572890     7.791163     7.299208
-## 100914_at      10.340852     9.917074    10.250062    12.248787    12.185526    12.127124
-## 101368_at       9.937227    10.204693    10.385215    12.270354    12.213499    12.078184
-## 101550_at       5.526695     5.439623     6.221104     2.137504     2.906891     2.035624
-## 101635_f_at     7.105385     6.722466     6.943687     5.266787     4.842979     4.643856
-## 101883_s_at     5.768184     6.127221     5.133399    11.564292    11.679568    11.663514</code></pre>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="differential-expression-analysis-using-basic-r.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Let&#39;s generate the volcano plot again,</span></span>
-<span id="cb32-2"><a href="differential-expression-analysis-using-basic-r.html#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="co"># highlighting the significantly differential expressed genes</span></span>
-<span id="cb32-3"><a href="differential-expression-analysis-using-basic-r.html#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(fold, <span class="sc">-</span><span class="fu">log10</span>(pvalue), <span class="at">main =</span> <span class="st">&quot;GSE5583 - Volcano #2&quot;</span>)</span>
-<span id="cb32-4"><a href="differential-expression-analysis-using-basic-r.html#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="fu">points</span> (fold[filter_combined], <span class="sc">-</span><span class="fu">log10</span>(pvalue[filter_combined]),</span>
-<span id="cb32-5"><a href="differential-expression-analysis-using-basic-r.html#cb32-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">pch =</span> <span class="dv">16</span>, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb30-1" title="1"><span class="kw">head</span>(filtered)</a></code></pre></div>
+<pre><code>##             WT.GSM130365 WT.GSM130366 WT.GSM130367 KO.GSM130368 KO.GSM130369
+## 100716_at       4.852998     4.906891     5.626439     7.572890     7.791163
+## 100914_at      10.340852     9.917074    10.250062    12.248787    12.185526
+## 101368_at       9.937227    10.204693    10.385215    12.270354    12.213499
+## 101550_at       5.526695     5.439623     6.221104     2.137504     2.906891
+## 101635_f_at     7.105385     6.722466     6.943687     5.266787     4.842979
+## 101883_s_at     5.768184     6.127221     5.133399    11.564292    11.679568
+##             KO.GSM130370
+## 100716_at       7.299208
+## 100914_at      12.127124
+## 101368_at      12.078184
+## 101550_at       2.035624
+## 101635_f_at     4.643856
+## 101883_s_at    11.663514</code></pre>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb32-1" title="1"><span class="co"># Let&#39;s generate the volcano plot again,</span></a>
+<a class="sourceLine" id="cb32-2" title="2"><span class="co"># highlighting the significantly differential expressed genes</span></a>
+<a class="sourceLine" id="cb32-3" title="3"><span class="kw">plot</span>(fold, <span class="op">-</span><span class="kw">log10</span>(pvalue), <span class="dt">main =</span> <span class="st">&quot;GSE5583 - Volcano #2&quot;</span>)</a>
+<a class="sourceLine" id="cb32-4" title="4"><span class="kw">points</span> (fold[filter_combined], <span class="op">-</span><span class="kw">log10</span>(pvalue[filter_combined]),</a>
+<a class="sourceLine" id="cb32-5" title="5">        <span class="dt">pch =</span> <span class="dv">16</span>, <span class="dt">col =</span> <span class="st">&quot;red&quot;</span>)</a></code></pre></div>
 <p><img src="bioinfbook_files/figure-html/unnamed-chunk-7-9.png" width="672" /></p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="differential-expression-analysis-using-basic-r.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Highlighting up-regulated in red and down-regulated in blue</span></span>
-<span id="cb33-2"><a href="differential-expression-analysis-using-basic-r.html#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(fold, <span class="sc">-</span><span class="fu">log10</span>(pvalue), <span class="at">main =</span> <span class="st">&quot;GSE5583 - Volcano #3&quot;</span>)</span>
-<span id="cb33-3"><a href="differential-expression-analysis-using-basic-r.html#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="fu">points</span> (fold[filter_combined <span class="sc">&amp;</span> fold <span class="sc">&lt;</span> <span class="dv">0</span>],</span>
-<span id="cb33-4"><a href="differential-expression-analysis-using-basic-r.html#cb33-4" aria-hidden="true" tabindex="-1"></a>        <span class="sc">-</span><span class="fu">log10</span>(pvalue[filter_combined <span class="sc">&amp;</span> fold <span class="sc">&lt;</span> <span class="dv">0</span>]),</span>
-<span id="cb33-5"><a href="differential-expression-analysis-using-basic-r.html#cb33-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">pch =</span> <span class="dv">16</span>, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>)</span>
-<span id="cb33-6"><a href="differential-expression-analysis-using-basic-r.html#cb33-6" aria-hidden="true" tabindex="-1"></a><span class="fu">points</span> (fold[filter_combined <span class="sc">&amp;</span> fold <span class="sc">&gt;</span> <span class="dv">0</span>],</span>
-<span id="cb33-7"><a href="differential-expression-analysis-using-basic-r.html#cb33-7" aria-hidden="true" tabindex="-1"></a>        <span class="sc">-</span><span class="fu">log10</span>(pvalue[filter_combined <span class="sc">&amp;</span> fold <span class="sc">&gt;</span> <span class="dv">0</span>]),</span>
-<span id="cb33-8"><a href="differential-expression-analysis-using-basic-r.html#cb33-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">pch =</span> <span class="dv">16</span>, <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb33-1" title="1"><span class="co"># Highlighting up-regulated in red and down-regulated in blue</span></a>
+<a class="sourceLine" id="cb33-2" title="2"><span class="kw">plot</span>(fold, <span class="op">-</span><span class="kw">log10</span>(pvalue), <span class="dt">main =</span> <span class="st">&quot;GSE5583 - Volcano #3&quot;</span>)</a>
+<a class="sourceLine" id="cb33-3" title="3"><span class="kw">points</span> (fold[filter_combined <span class="op">&amp;</span><span class="st"> </span>fold <span class="op">&lt;</span><span class="st"> </span><span class="dv">0</span>],</a>
+<a class="sourceLine" id="cb33-4" title="4">        <span class="op">-</span><span class="kw">log10</span>(pvalue[filter_combined <span class="op">&amp;</span><span class="st"> </span>fold <span class="op">&lt;</span><span class="st"> </span><span class="dv">0</span>]),</a>
+<a class="sourceLine" id="cb33-5" title="5">        <span class="dt">pch =</span> <span class="dv">16</span>, <span class="dt">col =</span> <span class="st">&quot;red&quot;</span>)</a>
+<a class="sourceLine" id="cb33-6" title="6"><span class="kw">points</span> (fold[filter_combined <span class="op">&amp;</span><span class="st"> </span>fold <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>],</a>
+<a class="sourceLine" id="cb33-7" title="7">        <span class="op">-</span><span class="kw">log10</span>(pvalue[filter_combined <span class="op">&amp;</span><span class="st"> </span>fold <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>]),</a>
+<a class="sourceLine" id="cb33-8" title="8">        <span class="dt">pch =</span> <span class="dv">16</span>, <span class="dt">col =</span> <span class="st">&quot;blue&quot;</span>)</a></code></pre></div>
 <p><img src="bioinfbook_files/figure-html/unnamed-chunk-7-10.png" width="672" /></p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="differential-expression-analysis-using-basic-r.html#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cluster the rows (genes) &amp; columns (samples) by correlation</span></span>
-<span id="cb34-2"><a href="differential-expression-analysis-using-basic-r.html#cb34-2" aria-hidden="true" tabindex="-1"></a>rowv <span class="ot">=</span> <span class="fu">as.dendrogram</span>(<span class="fu">hclust</span>(<span class="fu">as.dist</span>(<span class="dv">1</span><span class="sc">-</span><span class="fu">cor</span>(<span class="fu">t</span>(filtered)))))</span>
-<span id="cb34-3"><a href="differential-expression-analysis-using-basic-r.html#cb34-3" aria-hidden="true" tabindex="-1"></a>colv <span class="ot">=</span> <span class="fu">as.dendrogram</span>(<span class="fu">hclust</span>(<span class="fu">as.dist</span>(<span class="dv">1</span><span class="sc">-</span><span class="fu">cor</span>(filtered))))</span>
-<span id="cb34-4"><a href="differential-expression-analysis-using-basic-r.html#cb34-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-5"><a href="differential-expression-analysis-using-basic-r.html#cb34-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate a heatmap</span></span>
-<span id="cb34-6"><a href="differential-expression-analysis-using-basic-r.html#cb34-6" aria-hidden="true" tabindex="-1"></a><span class="fu">heatmap</span>(filtered, <span class="at">Rowv=</span>rowv, <span class="at">Colv=</span>colv, <span class="at">cexCol=</span><span class="fl">0.7</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb34-1" title="1"><span class="co"># Cluster the rows (genes) &amp; columns (samples) by correlation</span></a>
+<a class="sourceLine" id="cb34-2" title="2">rowv =<span class="st"> </span><span class="kw">as.dendrogram</span>(<span class="kw">hclust</span>(<span class="kw">as.dist</span>(<span class="dv">1</span><span class="op">-</span><span class="kw">cor</span>(<span class="kw">t</span>(filtered)))))</a>
+<a class="sourceLine" id="cb34-3" title="3">colv =<span class="st"> </span><span class="kw">as.dendrogram</span>(<span class="kw">hclust</span>(<span class="kw">as.dist</span>(<span class="dv">1</span><span class="op">-</span><span class="kw">cor</span>(filtered))))</a>
+<a class="sourceLine" id="cb34-4" title="4"></a>
+<a class="sourceLine" id="cb34-5" title="5"><span class="co"># Generate a heatmap</span></a>
+<a class="sourceLine" id="cb34-6" title="6"><span class="kw">heatmap</span>(filtered, <span class="dt">Rowv=</span>rowv, <span class="dt">Colv=</span>colv, <span class="dt">cexCol=</span><span class="fl">0.7</span>)</a></code></pre></div>
 <p><img src="bioinfbook_files/figure-html/unnamed-chunk-7-11.png" width="672" /></p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="differential-expression-analysis-using-basic-r.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gplots)</span>
-<span id="cb35-2"><a href="differential-expression-analysis-using-basic-r.html#cb35-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-3"><a href="differential-expression-analysis-using-basic-r.html#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Enhanced heatmap</span></span>
-<span id="cb35-4"><a href="differential-expression-analysis-using-basic-r.html#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="fu">heatmap.2</span>(filtered, <span class="at">Rowv=</span>rowv, <span class="at">Colv=</span>colv, <span class="at">cexCol=</span><span class="fl">0.7</span>,</span>
-<span id="cb35-5"><a href="differential-expression-analysis-using-basic-r.html#cb35-5" aria-hidden="true" tabindex="-1"></a>          <span class="at">col =</span> <span class="fu">rev</span>(<span class="fu">redblue</span>(<span class="dv">256</span>)), <span class="at">scale =</span> <span class="st">&quot;row&quot;</span>,</span>
-<span id="cb35-6"><a href="differential-expression-analysis-using-basic-r.html#cb35-6" aria-hidden="true" tabindex="-1"></a>          <span class="at">trace=</span><span class="st">&quot;none&quot;</span>, <span class="at">density.info=</span><span class="st">&quot;none&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb35-1" title="1"><span class="kw">library</span>(gplots)</a>
+<a class="sourceLine" id="cb35-2" title="2"></a>
+<a class="sourceLine" id="cb35-3" title="3"><span class="co"># Enhanced heatmap</span></a>
+<a class="sourceLine" id="cb35-4" title="4"><span class="kw">heatmap.2</span>(filtered, <span class="dt">Rowv=</span>rowv, <span class="dt">Colv=</span>colv, <span class="dt">cexCol=</span><span class="fl">0.7</span>,</a>
+<a class="sourceLine" id="cb35-5" title="5">          <span class="dt">col =</span> <span class="kw">rev</span>(<span class="kw">redblue</span>(<span class="dv">256</span>)), <span class="dt">scale =</span> <span class="st">&quot;row&quot;</span>,</a>
+<a class="sourceLine" id="cb35-6" title="6">          <span class="dt">trace=</span><span class="st">&quot;none&quot;</span>, <span class="dt">density.info=</span><span class="st">&quot;none&quot;</span>)</a></code></pre></div>
 <p><img src="bioinfbook_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="differential-expression-analysis-using-basic-r.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the heatmap to a PDF file</span></span>
-<span id="cb36-2"><a href="differential-expression-analysis-using-basic-r.html#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="fu">pdf</span> (<span class="st">&quot;GSE5583_DE_Heatmap.pdf&quot;</span>)</span>
-<span id="cb36-3"><a href="differential-expression-analysis-using-basic-r.html#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="fu">heatmap.2</span>(filtered, <span class="at">Rowv=</span>rowv, <span class="at">Colv=</span>colv, <span class="at">cexCol=</span><span class="fl">0.7</span>,</span>
-<span id="cb36-4"><a href="differential-expression-analysis-using-basic-r.html#cb36-4" aria-hidden="true" tabindex="-1"></a>          <span class="at">col =</span> <span class="fu">rev</span>(<span class="fu">redblue</span>(<span class="dv">256</span>)), <span class="at">scale =</span> <span class="st">&quot;row&quot;</span>)</span>
-<span id="cb36-5"><a href="differential-expression-analysis-using-basic-r.html#cb36-5" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span>
-<span id="cb36-6"><a href="differential-expression-analysis-using-basic-r.html#cb36-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb36-7"><a href="differential-expression-analysis-using-basic-r.html#cb36-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the DE genes to a text file</span></span>
-<span id="cb36-8"><a href="differential-expression-analysis-using-basic-r.html#cb36-8" aria-hidden="true" tabindex="-1"></a><span class="fu">write.table</span> (filtered, <span class="st">&quot;GSE5583_DE.txt&quot;</span>, <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>,</span>
-<span id="cb36-9"><a href="differential-expression-analysis-using-basic-r.html#cb36-9" aria-hidden="true" tabindex="-1"></a>             <span class="at">quote =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="differential-expression-analysis-using-basic-r.html#cb37-1" aria-hidden="true" tabindex="-1"></a>n <span class="ot">=</span> <span class="fu">nrow</span>(filtered)</span>
-<span id="cb37-2"><a href="differential-expression-analysis-using-basic-r.html#cb37-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-3"><a href="differential-expression-analysis-using-basic-r.html#cb37-3" aria-hidden="true" tabindex="-1"></a>cor.table <span class="ot">=</span> <span class="cn">NULL</span></span>
-<span id="cb37-4"><a href="differential-expression-analysis-using-basic-r.html#cb37-4" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> <span class="cn">NULL</span></span>
-<span id="cb37-5"><a href="differential-expression-analysis-using-basic-r.html#cb37-5" aria-hidden="true" tabindex="-1"></a>y <span class="ot">=</span> <span class="cn">NULL</span></span>
-<span id="cb37-6"><a href="differential-expression-analysis-using-basic-r.html#cb37-6" aria-hidden="true" tabindex="-1"></a>cor.val <span class="ot">=</span> <span class="cn">NULL</span></span>
-<span id="cb37-7"><a href="differential-expression-analysis-using-basic-r.html#cb37-7" aria-hidden="true" tabindex="-1"></a>cor.sig <span class="ot">=</span> <span class="cn">NULL</span></span>
-<span id="cb37-8"><a href="differential-expression-analysis-using-basic-r.html#cb37-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-9"><a href="differential-expression-analysis-using-basic-r.html#cb37-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span> <span class="sc">:</span> (n<span class="dv">-1</span>)) {</span>
-<span id="cb37-10"><a href="differential-expression-analysis-using-basic-r.html#cb37-10" aria-hidden="true" tabindex="-1"></a>  x_name <span class="ot">=</span> <span class="fu">rownames</span>(filtered)[i]</span>
-<span id="cb37-11"><a href="differential-expression-analysis-using-basic-r.html#cb37-11" aria-hidden="true" tabindex="-1"></a>  x_exps <span class="ot">=</span> filtered[i, ]    </span>
-<span id="cb37-12"><a href="differential-expression-analysis-using-basic-r.html#cb37-12" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb37-13"><a href="differential-expression-analysis-using-basic-r.html#cb37-13" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (j <span class="cf">in</span> (i<span class="sc">+</span><span class="dv">1</span>) <span class="sc">:</span> n) {</span>
-<span id="cb37-14"><a href="differential-expression-analysis-using-basic-r.html#cb37-14" aria-hidden="true" tabindex="-1"></a>    y_name <span class="ot">=</span> <span class="fu">rownames</span>(filtered)[j]</span>
-<span id="cb37-15"><a href="differential-expression-analysis-using-basic-r.html#cb37-15" aria-hidden="true" tabindex="-1"></a>    y_exps <span class="ot">=</span> filtered[j, ]</span>
-<span id="cb37-16"><a href="differential-expression-analysis-using-basic-r.html#cb37-16" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb37-17"><a href="differential-expression-analysis-using-basic-r.html#cb37-17" aria-hidden="true" tabindex="-1"></a>    output <span class="ot">=</span> <span class="fu">cor.test</span>(x_exps,y_exps)</span>
-<span id="cb37-18"><a href="differential-expression-analysis-using-basic-r.html#cb37-18" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb37-19"><a href="differential-expression-analysis-using-basic-r.html#cb37-19" aria-hidden="true" tabindex="-1"></a>    x <span class="ot">=</span> <span class="fu">c</span>(x, x_name)</span>
-<span id="cb37-20"><a href="differential-expression-analysis-using-basic-r.html#cb37-20" aria-hidden="true" tabindex="-1"></a>    y <span class="ot">=</span> <span class="fu">c</span>(y, y_name)</span>
-<span id="cb37-21"><a href="differential-expression-analysis-using-basic-r.html#cb37-21" aria-hidden="true" tabindex="-1"></a>    cor.val <span class="ot">=</span> <span class="fu">c</span>(cor.val, output<span class="sc">$</span>estimate)</span>
-<span id="cb37-22"><a href="differential-expression-analysis-using-basic-r.html#cb37-22" aria-hidden="true" tabindex="-1"></a>    cor.sig <span class="ot">=</span> <span class="fu">c</span>(cor.sig, output<span class="sc">$</span>p.value)</span>
-<span id="cb37-23"><a href="differential-expression-analysis-using-basic-r.html#cb37-23" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb37-24"><a href="differential-expression-analysis-using-basic-r.html#cb37-24" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb37-25"><a href="differential-expression-analysis-using-basic-r.html#cb37-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-26"><a href="differential-expression-analysis-using-basic-r.html#cb37-26" aria-hidden="true" tabindex="-1"></a>cor.table <span class="ot">=</span> <span class="fu">data.frame</span> (x, y, cor.val, cor.sig)</span>
-<span id="cb37-27"><a href="differential-expression-analysis-using-basic-r.html#cb37-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-28"><a href="differential-expression-analysis-using-basic-r.html#cb37-28" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(cor.table)</span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb36-1" title="1"><span class="co"># Save the heatmap to a PDF file</span></a>
+<a class="sourceLine" id="cb36-2" title="2"><span class="kw">pdf</span> (<span class="st">&quot;GSE5583_DE_Heatmap.pdf&quot;</span>)</a>
+<a class="sourceLine" id="cb36-3" title="3"><span class="kw">heatmap.2</span>(filtered, <span class="dt">Rowv=</span>rowv, <span class="dt">Colv=</span>colv, <span class="dt">cexCol=</span><span class="fl">0.7</span>,</a>
+<a class="sourceLine" id="cb36-4" title="4">          <span class="dt">col =</span> <span class="kw">rev</span>(<span class="kw">redblue</span>(<span class="dv">256</span>)), <span class="dt">scale =</span> <span class="st">&quot;row&quot;</span>)</a>
+<a class="sourceLine" id="cb36-5" title="5"><span class="kw">dev.off</span>()</a>
+<a class="sourceLine" id="cb36-6" title="6"></a>
+<a class="sourceLine" id="cb36-7" title="7"><span class="co"># Save the DE genes to a text file</span></a>
+<a class="sourceLine" id="cb36-8" title="8"><span class="kw">write.table</span> (filtered, <span class="st">&quot;GSE5583_DE.txt&quot;</span>, <span class="dt">sep =</span> <span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>,</a>
+<a class="sourceLine" id="cb36-9" title="9">             <span class="dt">quote =</span> <span class="ot">FALSE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb37-1" title="1">n =<span class="st"> </span><span class="kw">nrow</span>(filtered)</a>
+<a class="sourceLine" id="cb37-2" title="2"></a>
+<a class="sourceLine" id="cb37-3" title="3">cor.table =<span class="st"> </span><span class="ot">NULL</span></a>
+<a class="sourceLine" id="cb37-4" title="4">x =<span class="st"> </span><span class="ot">NULL</span></a>
+<a class="sourceLine" id="cb37-5" title="5">y =<span class="st"> </span><span class="ot">NULL</span></a>
+<a class="sourceLine" id="cb37-6" title="6">cor.val =<span class="st"> </span><span class="ot">NULL</span></a>
+<a class="sourceLine" id="cb37-7" title="7">cor.sig =<span class="st"> </span><span class="ot">NULL</span></a>
+<a class="sourceLine" id="cb37-8" title="8"></a>
+<a class="sourceLine" id="cb37-9" title="9"><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span> <span class="op">:</span><span class="st"> </span>(n<span class="dv">-1</span>)) {</a>
+<a class="sourceLine" id="cb37-10" title="10">  x_name =<span class="st"> </span><span class="kw">rownames</span>(filtered)[i]</a>
+<a class="sourceLine" id="cb37-11" title="11">  x_exps =<span class="st"> </span>filtered[i, ]    </a>
+<a class="sourceLine" id="cb37-12" title="12">  </a>
+<a class="sourceLine" id="cb37-13" title="13">  <span class="cf">for</span> (j <span class="cf">in</span> (i<span class="op">+</span><span class="dv">1</span>) <span class="op">:</span><span class="st"> </span>n) {</a>
+<a class="sourceLine" id="cb37-14" title="14">    y_name =<span class="st"> </span><span class="kw">rownames</span>(filtered)[j]</a>
+<a class="sourceLine" id="cb37-15" title="15">    y_exps =<span class="st"> </span>filtered[j, ]</a>
+<a class="sourceLine" id="cb37-16" title="16">    </a>
+<a class="sourceLine" id="cb37-17" title="17">    output =<span class="st"> </span><span class="kw">cor.test</span>(x_exps,y_exps)</a>
+<a class="sourceLine" id="cb37-18" title="18">    </a>
+<a class="sourceLine" id="cb37-19" title="19">    x =<span class="st"> </span><span class="kw">c</span>(x, x_name)</a>
+<a class="sourceLine" id="cb37-20" title="20">    y =<span class="st"> </span><span class="kw">c</span>(y, y_name)</a>
+<a class="sourceLine" id="cb37-21" title="21">    cor.val =<span class="st"> </span><span class="kw">c</span>(cor.val, output<span class="op">$</span>estimate)</a>
+<a class="sourceLine" id="cb37-22" title="22">    cor.sig =<span class="st"> </span><span class="kw">c</span>(cor.sig, output<span class="op">$</span>p.value)</a>
+<a class="sourceLine" id="cb37-23" title="23">  }</a>
+<a class="sourceLine" id="cb37-24" title="24">}</a>
+<a class="sourceLine" id="cb37-25" title="25"></a>
+<a class="sourceLine" id="cb37-26" title="26">cor.table =<span class="st"> </span><span class="kw">data.frame</span> (x, y, cor.val, cor.sig)</a>
+<a class="sourceLine" id="cb37-27" title="27"></a>
+<a class="sourceLine" id="cb37-28" title="28"><span class="kw">dim</span>(cor.table)</a></code></pre></div>
 <pre><code>## [1] 861   4</code></pre>
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="differential-expression-analysis-using-basic-r.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(cor.table)</span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb39-1" title="1"><span class="kw">head</span>(cor.table)</a></code></pre></div>
 <pre><code>##           x           y    cor.val      cor.sig
 ## 1 100716_at   100914_at  0.9732295 0.0010653980
 ## 2 100716_at   101368_at  0.9897688 0.0001564799
@@ -401,13 +407,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 4 100716_at 101635_f_at -0.9433403 0.0047245418
 ## 5 100716_at 101883_s_at  0.9508680 0.0035616301
 ## 6 100716_at   102712_at  0.9676037 0.0015572795</code></pre>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="differential-expression-analysis-using-basic-r.html#cb41-1" aria-hidden="true" tabindex="-1"></a>sig_cutoff <span class="ot">=</span> <span class="fl">0.001</span></span>
-<span id="cb41-2"><a href="differential-expression-analysis-using-basic-r.html#cb41-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-3"><a href="differential-expression-analysis-using-basic-r.html#cb41-3" aria-hidden="true" tabindex="-1"></a>cor.filtered <span class="ot">=</span> <span class="fu">subset</span> (cor.table, cor.sig <span class="sc">&lt;</span> sig_cutoff)</span>
-<span id="cb41-4"><a href="differential-expression-analysis-using-basic-r.html#cb41-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-5"><a href="differential-expression-analysis-using-basic-r.html#cb41-5" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(cor.filtered)</span></code></pre></div>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb41-1" title="1">sig_cutoff =<span class="st"> </span><span class="fl">0.001</span></a>
+<a class="sourceLine" id="cb41-2" title="2"></a>
+<a class="sourceLine" id="cb41-3" title="3">cor.filtered =<span class="st"> </span><span class="kw">subset</span> (cor.table, cor.sig <span class="op">&lt;</span><span class="st"> </span>sig_cutoff)</a>
+<a class="sourceLine" id="cb41-4" title="4"></a>
+<a class="sourceLine" id="cb41-5" title="5"><span class="kw">dim</span>(cor.filtered)</a></code></pre></div>
 <pre><code>## [1] 314   4</code></pre>
-<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="differential-expression-analysis-using-basic-r.html#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(cor.filtered)</span></code></pre></div>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb43-1" title="1"><span class="kw">head</span>(cor.filtered)</a></code></pre></div>
 <pre><code>##            x         y    cor.val      cor.sig
 ## 2  100716_at 101368_at  0.9897688 1.564799e-04
 ## 8  100716_at 103088_at -0.9761495 8.464861e-04
@@ -416,7 +422,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 15 100716_at 160172_at  0.9833552 4.132702e-04
 ## 16 100716_at 160943_at  0.9814703 5.118449e-04</code></pre>
 </div>
-<div id="sources" class="section level2" number="4.2">
+<div id="sources" class="section level2">
 <h2><span class="header-section-number">4.2</span> Sources</h2>
 <p><a href="https://gist.github.com/ahmedmoustafa">Ahmed Moustafa githab</a></p>
 
