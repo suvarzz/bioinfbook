@@ -1,0 +1,71 @@
+# Analyis of new generation sequencing data in R
+
+## Get fastq from SRA
+# Get fastq from SRA database
+```{r, eval=FALSE}
+library(SRAdb) # SRA database
+dir.create("~/SRA")
+setwd("~/SRA")
+
+## Create database
+sqlfile <-'SRAmetadb.sqlite'
+# load database [~3 Gb, 60 Gb on disc!!!]
+if(!file.exists('SRAmetadb.sqlite')) sqlfile <<- getSRAdbFile()
+# connect database
+sra_con <- dbConnect(SQLite(), sqlfile)
+
+## get info for SRA from created database
+sraInf <- getSRAinfo("SRP045534", sra_con, sraType="sra")
+sraInf
+
+# download SRA
+# get SRA using SRA info [~ 5 Gb]
+sapply(sraInf$run, function(x) try(getSRAfile(x, sra_con, fileType="sra"), silent=TRUE))
+```
+
+## Get fastq from SRA database
+```{r, eval=FALSE}
+library(SRAdb) # SRA database
+dir.create("~/SRA")
+setwd("~/SRA")
+
+## Create database
+sqlfile <-'SRAmetadb.sqlite'
+# load database [~3 Gb, 60 Gb on disc!!!]
+if(!file.exists('SRAmetadb.sqlite')) sqlfile <<- getSRAdbFile()
+# connect database
+sra_con <- dbConnect(SQLite(), sqlfile)
+
+## get info for SRA from created database
+sraInf <- getSRAinfo("SRP045534", sra_con, sraType="sra")
+sraInf
+
+# download SRA
+# get SRA using SRA info [~ 5 Gb]
+sapply(sraInf$run, function(x) try(getSRAfile(x, sra_con, fileType="sra"), silent=TRUE))
+```
+```{bash, eval=FALSE}
+
+## Alignment using Rsubread
+```{r, eval=FALSE}
+library(Rsubread) # sequence alignment
+
+fastq.files <- list.files(pattern = ".fastq.gz$", full.names = TRUE)
+fastq.files
+
+# build index
+buildindex(basename="mm10", reference="mm10.fa")
+
+# alignment
+align(fastq.files, index="chr1_mm10")
+
+# parameters
+args(align)
+
+# check result
+bam.files <- list.files(pattern = ".BAM$", full.names = TRUE)
+bam.files
+# properties of BAM files
+propmapped(files=bam.files)
+```
+

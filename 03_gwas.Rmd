@@ -1,0 +1,72 @@
+# Genome Wide Associated Studies (GWAS)"
+
+
+## SNP analysis using SNPasoc R package
+Example demonstrate an association test for an illness for one single SNP.  
+
+```{r, eval=FALSE}
+install.packages("SNPassoc")
+library("SNPassoc")
+data(SNPs)
+head(SNPs)
+head(SNPs.info.pos)
+
+# select 6-40 SNP and create SNP object
+mySNP <- setupSNP(SNPs, 6:40, sep="")
+
+# casco - 1 for case, 0 for control)
+mySNP
+
+# association test
+res <- association(casco~sex+snp10001+blood.pre, data = mySNP,
+                     model.interaction = c("dominant","codominant"))
+res
+```
+
+0 - control sample size  
+% - percent for each variant  
+1 - case sample size  
+% - percent for each varian  
+OR - odd ratio  
+lower/upper - 95% confidence interval for odd ratio  
+p-value of likelihood ratio test  
+AIC - Akaike Information Criterion  
+
+```{r, eval=FALSE}
+# association scan for SNPs - separately for all models
+res <- WGassociation(protein, data = mySNP, model = 'all') # same formula as protein~1,
+# p-values for dominant model
+dominant(res)
+# p-values for recessive model
+recessive(res)
+# complete statistics
+WGstats(res)
+summary(res)
+
+# Plot p-values for all models
+plot(res)
+
+# whole genome association - one log model
+resHapMap <- WGassociation(protein, data= mySNP, model='log')
+plot(resHapMap)
+
+Another examplw for all genome association
+# two population groups (CEU and YRI), 60 samples for each group
+data(HapMap)
+str(HapMap)
+str(HapMap.SNPs.pos)
+# SNP class object
+myHapMap <- setupSNP(HapMap, colSNPs=3:9307, sort=TRUE, info=HapMap.SNPs.pos, sep="")
+
+# association for dominant model
+myHapMapres <- WGassociation(group, data= myHapMap, model="dominant")
+
+head(myHapMapres)
+print(myHapMapres)
+# plot association for all chromosomes
+
+plot(myHapMapres, whole=TRUE)
+```
+
+## GWAS using PLINK
+The PLINK format of the GWAS data consists of two separate files, one containing the *SNP information* (.ped)and the other containing the *mapping information* (.map). For dependence analysis, it can be combined with the phenotype data separately.  

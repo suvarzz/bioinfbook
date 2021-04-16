@@ -1,0 +1,169 @@
+# Hi-C workflow
+
+Workflow from Stansfield et al., Current Protocols in Bioinformatics, 2019
+
+Hi-C workflow steps:  
+1. mapping reads  
+2. assigning fragments  
+3. filtering fragments  
+4. binning  
+5. bin-level filtering  
+6. balancing (normalization) of individual matrices  
+
+Paired-end reads of Hi-C experiments are mapped using the single-end mode to map each read (of the pair) independently.  
+The theoretical maximum resolution of Hi-C sequencing is set by the restriction enzyme used to cut the DNA. However, most Hi-C datasets are not sequenced deeply enough to reach this theoretical maximum, and typically one of a few fixed-size resolutions are chosen for analyzing the data, including 1 Mb, 100 kb, 50 kb, 40 kb, 20 kb, 10 kb, and 5 kb.  
+Two of the more popular pipelines for aligning Hi-C data are **juicer** (Durand, Shamim, & Aiden, 2016) and **HiC-Pro** (Servant et al., 2015).  
+
+[**juicer**](https://github.com/aidenlab/juicer/wiki) takes fastq files and aligns the data into .hic sparse contact maps. Alignment is based on BWA. Contact maps can be extracted from .hic files using juicer or the command line tool **straw**.  
+
+## Using straw tool to extract contact matrix from .hic files
+```{bash, eval=F}
+<NONE/VC/VC_SQRT/KR> <hicFile(s)> <chr1>[:x1:x2] <chr2>[:y1:y2] <BP/FRAG> <binsize>
+```
+VC - vanilla coverage normalization  
+VC_SQRT - square root of vanilla coverage normalization  
+KR - Knight-Ruiz (KR) normalization  
+BP/FRAG - base pare or fragment size. Typically we use BP.  
+
+```{bash, eval=F}
+mkdir ~/GEO
+cd ~/GEO
+# download .hic file [9 Gb]
+wget ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE63nnn/GSE63525/suppl/GSE63525_K562_combined_30.hic
+# extract raw matrix for 22 chromosome at 500-kb resolution
+straw NONE GSE63525_K562_combined_30.hic 22 22 BP 500000 > K562.chHCT116_r22.500 kb.txt
+```
+txt file is in the sparse upper-triangular matrix format, containing 3 columns:  
+1. start of interaction  
+2. end of interaction  
+3. frequency (IF)  
+
+
+## HiC-Pro pipeline
+Output 2 files (.matrix and .bed):  
+* The .matrix is plain-text 3-column sparse upper-triangular matrix with the columns $bin_i$ $bin_j$ and $counts_ij$.  
+* The .bed file contains the genomic coordinates for each $bin_i$ and $bin_j$.
+
+`sparse2full` - convert sparse upper-triangular matrix to full contact matrix.  
+`hicpro2bedpe` - convert alignments by HiC-Pro into BEDPE format.  
+`hicpro2bedpe` - input .matrix and .bed and convert into sparse upper-triangular matrix.  
+
+## multiHiC compare for compare of 2 Hi-C datasets (Rao et al. 2017)
+```{bash, eval=F}
+mkdir ~/GEO
+cd ~/GEO
+# download .hic files from
+wget ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2795nnn/GSM2795535/suppl/GSM2795535_Rao-2017-HIC001_30.hic
+wget ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2795nnn/GSM2795536/suppl/GSM2795536_Rao-2017-HIC002_30.hic
+wget ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2809nnn/GSM2809539/suppl/GSM2809539_Rao-2017-HIC008_30.hic
+wget ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2809nnn/GSM2809540/suppl/GSM2809540_Rao-2017-HIC009_30.hic
+
+# convert .hic to sparse contact matrix for each of 22 chromosomes
+for i in {1,2,8,9}
+   do
+     mkdir HIC00${i}
+     for j in {1..22}
+       do
+         straw NONE *_Rao-2017-HIC00${i}_30.hic $j $j BP 100000 > HIC00${i}/HIC00${i}.NONE.chr${j}.100000.txt
+       done
+   done
+```
+
+
+```{r, eval=F}
+library(readr)
+library(data.table)
+library(dplyr)
+library(edgeR)
+library(BiocParallel)
+library(HiCcompare)
+library(multiHiCcompare)
+
+
+options(scipen = 10) # output fixed numbers
+
+# Set up parameters for reading in data
+chr <- paste0('chr', c(1:22))     # Chromosome names
+samples <- paste0('HIC00', c(1,2,8,9)) # Sample names
+res <- 100000                          # Data resolution
+
+# Read data
+sample_list <- list()
+chr_list <- list()
+wd <- '/home/suvar/GEO/'
+for(j in 1:length(samples)) {
+  for (i in 1:length(chr)) {
+    chr_list[[i]] <- read_tsv(paste0(wd, samples[j], '/',
+    samples[j], '.NONE.', chr[i], '.', res, '.txt'),
+    col_names = FALSE) %>% as.data.table()
+    # Add column indicating the chromosome
+    chr_list[[i]] <- cbind(i, chr_list[[i]])
+    colnames(chr_list[[i]]) <- c('chr', 'region1', 'region2', 'IF')
+  }
+  sample_list[[j]] <- chr_list
+  chr_list <- list()
+}
+
+# Collapse separate chromosome lists into one table per sample
+sample_list <- lapply(sample_list, rbindlist)
+  
+sample_list[[1]]
+```
+
+## Joint normalization of Hi-C
+
+```{r, eval=F}
+library(pander)
+# Create a Hicexp object for use by multiHiCcompare (~10 min)
+# Four objects are assigned into two groups
+rao2017 <- make_hicexp(data_list = sample_list, groups = c(1,1,2,2))
+rao2017 # class(rao2017)
+
+# view the IF information
+hic_table(rao2017)
+
+# MD plots before normalization
+MD_hicexp(rao2017, plot.chr = 1, plot.loess = TRUE)
+```
+```{r,eval=F}
+# Normalize (~2 min)
+rao2017 <- fastlo(rao2017) # cyclic loesss normalisation is also available
+
+# Plot normalization results
+MD_hicexp(rao2017, plot.chr = 1, plot.loess = TRUE)
+
+# Print normalized IFs
+pander::pandoc.table(head(hic_table(rao2017)))
+
+library(BiocParallel)
+# Check how many cores are available
+numCores <- parallel::detectCores()
+# Set the number of cores at least one less than the total number
+
+if(Sys.info()['sysname'] == 'Windows') {
+  # Windows settings
+  register(SnowParam(workers = numCores-1),
+  default = TRUE)
+  }else {
+  # Unix settings
+  register(MulticoreParam(workers = numCores-1),
+  default = TRUE)
+  }
+```
+
+## Difference detection
+```{r, eval=F}
+# Perform exact test (~10 min)
+# May use "parallel = TRUE" option to speed up computations
+rao2017 <- hic_exactTest(rao2017, parallel = TRUE)
+# Plot a composite MD plot with the results of a comparison
+MD_composite(rao2017,plot.chr = 1)
+# Print results as a data frame
+pander::pandoc.table(head(results(rao2017)))
+
+# Save the Hicexp object
+save(rao2017, file = paste0(wd,'rao2017.RDA'))
+# To start the downstream analysis
+# without re-running multiHiCcompare load the saved file
+# load(paste0(wd,'rao2017.RDA'))
+```
