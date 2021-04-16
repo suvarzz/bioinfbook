@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Get fastq from SRA database | A Minimal Book Example</title>
+  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Get fastq from SRA database | A Minimal Book Example" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Get fastq from SRA database | A Minimal Book Example" />
+  
+  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="Yihui Xie" />
+
+
+<meta name="date" content="2021-04-16" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="analyis-of-new-generation-sequencing-data-in-r.html"/>
+<link rel="next" href="differential-expression-analysis-using-basic-r.html"/>
+<script src="libs/header-attrs-2.7/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a></li>
+<li class="chapter" data-level="2" data-path="analyis-of-new-generation-sequencing-data-in-r.html"><a href="analyis-of-new-generation-sequencing-data-in-r.html"><i class="fa fa-check"></i><b>2</b> Analyis of new generation sequencing data in R</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="analyis-of-new-generation-sequencing-data-in-r.html"><a href="analyis-of-new-generation-sequencing-data-in-r.html#get-fastq-from-sra"><i class="fa fa-check"></i><b>2.1</b> Get fastq from SRA</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="get-fastq-from-sra-database.html"><a href="get-fastq-from-sra-database.html"><i class="fa fa-check"></i><b>3</b> Get fastq from SRA database</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="get-fastq-from-sra-database.html"><a href="get-fastq-from-sra-database.html#get-fastq-from-sra-database-1"><i class="fa fa-check"></i><b>3.1</b> Get fastq from SRA database</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="differential-expression-analysis-using-basic-r.html"><a href="differential-expression-analysis-using-basic-r.html"><i class="fa fa-check"></i><b>4</b> Differential expression analysis using basic R</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="differential-expression-analysis-using-basic-r.html"><a href="differential-expression-analysis-using-basic-r.html#gene-expression-analysis-of-histone-deacetylase-1-hdac1-knockout-mouse."><i class="fa fa-check"></i><b>4.1</b> Gene expression analysis of histone deacetylase 1 (HDAC1) knockout mouse.</a></li>
+<li class="chapter" data-level="4.2" data-path="differential-expression-analysis-using-basic-r.html"><a href="differential-expression-analysis-using-basic-r.html#sources"><i class="fa fa-check"></i><b>4.2</b> Sources</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="genome-wide-associated-studies-gwas.html"><a href="genome-wide-associated-studies-gwas.html"><i class="fa fa-check"></i><b>5</b> Genome Wide Associated Studies (GWAS)"</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="genome-wide-associated-studies-gwas.html"><a href="genome-wide-associated-studies-gwas.html#snp-analysis-using-snpasoc-r-package"><i class="fa fa-check"></i><b>5.1</b> SNP analysis using SNPasoc R package</a></li>
+<li class="chapter" data-level="5.2" data-path="genome-wide-associated-studies-gwas.html"><a href="genome-wide-associated-studies-gwas.html#gwas-using-plink"><i class="fa fa-check"></i><b>5.2</b> GWAS using PLINK</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="hi-c-workflow.html"><a href="hi-c-workflow.html"><i class="fa fa-check"></i><b>6</b> Hi-C workflow</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="hi-c-workflow.html"><a href="hi-c-workflow.html#using-straw-tool-to-extract-contact-matrix-from-.hic-files"><i class="fa fa-check"></i><b>6.1</b> Using straw tool to extract contact matrix from .hic files</a></li>
+<li class="chapter" data-level="6.2" data-path="hi-c-workflow.html"><a href="hi-c-workflow.html#hic-pro-pipeline"><i class="fa fa-check"></i><b>6.2</b> HiC-Pro pipeline</a></li>
+<li class="chapter" data-level="6.3" data-path="hi-c-workflow.html"><a href="hi-c-workflow.html#multihic-compare-for-compare-of-2-hi-c-datasets-rao-et-al.-2017"><i class="fa fa-check"></i><b>6.3</b> multiHiC compare for compare of 2 Hi-C datasets (Rao et al. 2017)</a></li>
+<li class="chapter" data-level="6.4" data-path="hi-c-workflow.html"><a href="hi-c-workflow.html#joint-normalization-of-hi-c"><i class="fa fa-check"></i><b>6.4</b> Joint normalization of Hi-C</a></li>
+<li class="chapter" data-level="6.5" data-path="hi-c-workflow.html"><a href="hi-c-workflow.html#difference-detection"><i class="fa fa-check"></i><b>6.5</b> Difference detection</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A Minimal Book Example</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="get-fastq-from-sra-database" class="section level1" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Get fastq from SRA database</h1>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="get-fastq-from-sra-database.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(SRAdb) <span class="co"># SRA database</span></span>
+<span id="cb2-2"><a href="get-fastq-from-sra-database.html#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="st">&quot;~/SRA&quot;</span>)</span>
+<span id="cb2-3"><a href="get-fastq-from-sra-database.html#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~/SRA&quot;</span>)</span>
+<span id="cb2-4"><a href="get-fastq-from-sra-database.html#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="get-fastq-from-sra-database.html#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="do">## Create database</span></span>
+<span id="cb2-6"><a href="get-fastq-from-sra-database.html#cb2-6" aria-hidden="true" tabindex="-1"></a>sqlfile <span class="ot">&lt;-</span><span class="st">&#39;SRAmetadb.sqlite&#39;</span></span>
+<span id="cb2-7"><a href="get-fastq-from-sra-database.html#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># load database [~3 Gb, 60 Gb on disc!!!]</span></span>
+<span id="cb2-8"><a href="get-fastq-from-sra-database.html#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">file.exists</span>(<span class="st">&#39;SRAmetadb.sqlite&#39;</span>)) sqlfile <span class="ot">&lt;&lt;-</span> <span class="fu">getSRAdbFile</span>()</span>
+<span id="cb2-9"><a href="get-fastq-from-sra-database.html#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># connect database</span></span>
+<span id="cb2-10"><a href="get-fastq-from-sra-database.html#cb2-10" aria-hidden="true" tabindex="-1"></a>sra_con <span class="ot">&lt;-</span> <span class="fu">dbConnect</span>(<span class="fu">SQLite</span>(), sqlfile)</span>
+<span id="cb2-11"><a href="get-fastq-from-sra-database.html#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="get-fastq-from-sra-database.html#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="do">## get info for SRA from created database</span></span>
+<span id="cb2-13"><a href="get-fastq-from-sra-database.html#cb2-13" aria-hidden="true" tabindex="-1"></a>sraInf <span class="ot">&lt;-</span> <span class="fu">getSRAinfo</span>(<span class="st">&quot;SRP045534&quot;</span>, sra_con, <span class="at">sraType=</span><span class="st">&quot;sra&quot;</span>)</span>
+<span id="cb2-14"><a href="get-fastq-from-sra-database.html#cb2-14" aria-hidden="true" tabindex="-1"></a>sraInf</span>
+<span id="cb2-15"><a href="get-fastq-from-sra-database.html#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="get-fastq-from-sra-database.html#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co"># download SRA</span></span>
+<span id="cb2-17"><a href="get-fastq-from-sra-database.html#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="co"># get SRA using SRA info [~ 5 Gb]</span></span>
+<span id="cb2-18"><a href="get-fastq-from-sra-database.html#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="fu">sapply</span>(sraInf<span class="sc">$</span>run, <span class="cf">function</span>(x) <span class="fu">try</span>(<span class="fu">getSRAfile</span>(x, sra_con, <span class="at">fileType=</span><span class="st">&quot;sra&quot;</span>), <span class="at">silent=</span><span class="cn">TRUE</span>))</span></code></pre></div>
+<div id="get-fastq-from-sra-database-1" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Get fastq from SRA database</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="get-fastq-from-sra-database.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(SRAdb) <span class="co"># SRA database</span></span>
+<span id="cb3-2"><a href="get-fastq-from-sra-database.html#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="st">&quot;~/SRA&quot;</span>)</span>
+<span id="cb3-3"><a href="get-fastq-from-sra-database.html#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~/SRA&quot;</span>)</span>
+<span id="cb3-4"><a href="get-fastq-from-sra-database.html#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="get-fastq-from-sra-database.html#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="do">## Create database</span></span>
+<span id="cb3-6"><a href="get-fastq-from-sra-database.html#cb3-6" aria-hidden="true" tabindex="-1"></a>sqlfile <span class="ot">&lt;-</span><span class="st">&#39;SRAmetadb.sqlite&#39;</span></span>
+<span id="cb3-7"><a href="get-fastq-from-sra-database.html#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># load database [~3 Gb, 60 Gb on disc!!!]</span></span>
+<span id="cb3-8"><a href="get-fastq-from-sra-database.html#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">file.exists</span>(<span class="st">&#39;SRAmetadb.sqlite&#39;</span>)) sqlfile <span class="ot">&lt;&lt;-</span> <span class="fu">getSRAdbFile</span>()</span>
+<span id="cb3-9"><a href="get-fastq-from-sra-database.html#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># connect database</span></span>
+<span id="cb3-10"><a href="get-fastq-from-sra-database.html#cb3-10" aria-hidden="true" tabindex="-1"></a>sra_con <span class="ot">&lt;-</span> <span class="fu">dbConnect</span>(<span class="fu">SQLite</span>(), sqlfile)</span>
+<span id="cb3-11"><a href="get-fastq-from-sra-database.html#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="get-fastq-from-sra-database.html#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="do">## get info for SRA from created database</span></span>
+<span id="cb3-13"><a href="get-fastq-from-sra-database.html#cb3-13" aria-hidden="true" tabindex="-1"></a>sraInf <span class="ot">&lt;-</span> <span class="fu">getSRAinfo</span>(<span class="st">&quot;SRP045534&quot;</span>, sra_con, <span class="at">sraType=</span><span class="st">&quot;sra&quot;</span>)</span>
+<span id="cb3-14"><a href="get-fastq-from-sra-database.html#cb3-14" aria-hidden="true" tabindex="-1"></a>sraInf</span>
+<span id="cb3-15"><a href="get-fastq-from-sra-database.html#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="get-fastq-from-sra-database.html#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="co"># download SRA</span></span>
+<span id="cb3-17"><a href="get-fastq-from-sra-database.html#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="co"># get SRA using SRA info [~ 5 Gb]</span></span>
+<span id="cb3-18"><a href="get-fastq-from-sra-database.html#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="fu">sapply</span>(sraInf<span class="sc">$</span>run, <span class="cf">function</span>(x) <span class="fu">try</span>(<span class="fu">getSRAfile</span>(x, sra_con, <span class="at">fileType=</span><span class="st">&quot;sra&quot;</span>), <span class="at">silent=</span><span class="cn">TRUE</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="get-fastq-from-sra-database.html#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-2"><a href="get-fastq-from-sra-database.html#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">## Alignment using Rsubread</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="get-fastq-from-sra-database.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(Rsubread) <span class="co"># sequence alignment</span></span>
+<span id="cb5-2"><a href="get-fastq-from-sra-database.html#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="get-fastq-from-sra-database.html#cb5-3" aria-hidden="true" tabindex="-1"></a>fastq.files <span class="ot">&lt;-</span> <span class="fu">list.files</span>(<span class="at">pattern =</span> <span class="st">&quot;.fastq.gz$&quot;</span>, <span class="at">full.names =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb5-4"><a href="get-fastq-from-sra-database.html#cb5-4" aria-hidden="true" tabindex="-1"></a>fastq.files</span>
+<span id="cb5-5"><a href="get-fastq-from-sra-database.html#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="get-fastq-from-sra-database.html#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># build index</span></span>
+<span id="cb5-7"><a href="get-fastq-from-sra-database.html#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="fu">buildindex</span>(<span class="at">basename=</span><span class="st">&quot;mm10&quot;</span>, <span class="at">reference=</span><span class="st">&quot;mm10.fa&quot;</span>)</span>
+<span id="cb5-8"><a href="get-fastq-from-sra-database.html#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="get-fastq-from-sra-database.html#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co"># alignment</span></span>
+<span id="cb5-10"><a href="get-fastq-from-sra-database.html#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="fu">align</span>(fastq.files, <span class="at">index=</span><span class="st">&quot;chr1_mm10&quot;</span>)</span>
+<span id="cb5-11"><a href="get-fastq-from-sra-database.html#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="get-fastq-from-sra-database.html#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="co"># parameters</span></span>
+<span id="cb5-13"><a href="get-fastq-from-sra-database.html#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="fu">args</span>(align)</span>
+<span id="cb5-14"><a href="get-fastq-from-sra-database.html#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-15"><a href="get-fastq-from-sra-database.html#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="co"># check result</span></span>
+<span id="cb5-16"><a href="get-fastq-from-sra-database.html#cb5-16" aria-hidden="true" tabindex="-1"></a>bam.files <span class="ot">&lt;-</span> <span class="fu">list.files</span>(<span class="at">pattern =</span> <span class="st">&quot;.BAM$&quot;</span>, <span class="at">full.names =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb5-17"><a href="get-fastq-from-sra-database.html#cb5-17" aria-hidden="true" tabindex="-1"></a>bam.files</span>
+<span id="cb5-18"><a href="get-fastq-from-sra-database.html#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="co"># properties of BAM files</span></span>
+<span id="cb5-19"><a href="get-fastq-from-sra-database.html#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="fu">propmapped</span>(<span class="at">files=</span>bam.files)</span></code></pre></div>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="analyis-of-new-generation-sequencing-data-in-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="differential-expression-analysis-using-basic-r.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/01_ngs_in_r.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bioinfbook.pdf", "bioinfbook.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
